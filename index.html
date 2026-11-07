@@ -777,6 +777,32 @@ body{overflow:hidden;font-family:'DM Sans',sans-serif}
   pointer-events:auto!important;
 }
 
+
+/* Garden messages: clean typography, no paper cards, reveal gently in sequence */
+#garden .garden-notes{pointer-events:none!important}
+#garden .garden-note{
+  width:auto!important;max-width:min(38%,250px)!important;
+  padding:0!important;margin:0!important;border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;
+  color:#76515e!important;text-shadow:0 1px 8px rgba(255,252,242,.78)!important;
+  font:italic 500 clamp(1rem,2.4vw,1.3rem)/1.3 'Cormorant Garamond',Georgia,serif!important;
+  opacity:0!important;visibility:hidden!important;transform:translateY(9px)!important;
+  transition:opacity .75s ease,transform .75s ease,visibility .75s ease!important;
+}
+#garden .garden-note.is-visible{opacity:1!important;visibility:visible!important;transform:translateY(0)!important}
+#garden .note-one{top:3%!important;left:4%!important;right:auto!important;bottom:auto!important;text-align:left!important}
+#garden .note-two{top:3%!important;right:4%!important;left:auto!important;bottom:auto!important;text-align:right!important}
+#garden .note-three{top:47%!important;left:2%!important;right:auto!important;bottom:auto!important;text-align:left!important}
+#garden .note-four{top:47%!important;right:2%!important;left:auto!important;bottom:auto!important;text-align:right!important}
+#garden .note-five{top:5%!important;left:50%!important;right:auto!important;bottom:auto!important;max-width:80%!important;transform:translate(-50%,9px)!important;text-align:center!important}
+#garden .note-five.is-visible{transform:translate(-50%,0)!important}
+@media(max-width:700px){
+ #garden .garden-note{max-width:34%!important;font-size:clamp(1rem,3.8vw,1.22rem)!important;line-height:1.25!important}
+ #garden .note-one,#garden .note-two{top:2%!important}
+ #garden .note-three,#garden .note-four{top:44%!important}
+ #garden .note-five{top:3%!important;left:50%!important;max-width:80%!important}
+}
+
 </style>
 </head>
 <body>
@@ -966,11 +992,11 @@ body{overflow:hidden;font-family:'DM Sans',sans-serif}
     <header class="section-head garden-heading"><h2>lileyzzz</h2></header>
     <div class="garden-layout garden-scatter-layout">
       <div class="garden-notes" aria-label="Comforting words">
-        <p class="garden-note note-one">i lawb you zobraaah</p>
-        <p class="garden-note note-two">you look like lilies and tulips, very magandah</p>
-        <p class="garden-note note-three">you are my favourite person, my favourite bestfriend</p>
-        <p class="garden-note note-four">you can handle anything because you've already handled everything</p>
-        <p class="garden-note note-five">fiel, a lovely poem</p>
+        <p class="garden-note note-one" aria-hidden="true">i lawb you, zobraaah</p>
+        <p class="garden-note note-two" aria-hidden="true">you look lovely, like lilies and tulips</p>
+        <p class="garden-note note-three" aria-hidden="true">my favourite person and bestfriend</p>
+        <p class="garden-note note-four" aria-hidden="true">you can handle anything</p>
+        <p class="garden-note note-five" aria-hidden="true">fiel, a lovely poem</p>
       </div>
       <div class="garden-ground" aria-label="A garden of two lilies and two tulips">
         <span class="scattered-petal petal-a" aria-hidden="true"></span><span class="scattered-petal petal-b" aria-hidden="true"></span>
@@ -1214,6 +1240,14 @@ let waterCount=0;
 const flowerBeds=selectAll(".flower-bed");
 const waterButton=selectOne("#waterBtn");
 const counter=selectOne("#waterCount");
+const gardenNotes=selectAll(".garden-note");
+const revealGardenNote=(index)=>{
+  gardenNotes.forEach((note,i)=>{
+    const visible=i===index;
+    note.classList.toggle("is-visible",visible);
+    note.setAttribute("aria-hidden",visible?"false":"true");
+  });
+};
 waterButton?.addEventListener("click",()=>{
   if(waterCount>=flowerBeds.length)return;
   const flower=flowerBeds[waterCount];
@@ -1223,9 +1257,11 @@ waterButton?.addEventListener("click",()=>{
   if(counter)counter.textContent=waterCount+" / "+flowerBeds.length;
   if(waterCount>=2)selectOne("#butterflyA")?.classList.add("show");
   if(waterCount>=3)selectOne("#butterflyB")?.classList.add("show");
+  revealGardenNote(waterCount-1);
   if(waterCount===flowerBeds.length&&waterButton){
     waterButton.disabled=true;
     waterButton.setAttribute("aria-label","All four flowers are blooming");
+    window.setTimeout(()=>revealGardenNote(4),1200);
   }
 });
 </script>
