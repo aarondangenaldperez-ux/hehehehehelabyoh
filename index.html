@@ -130,10 +130,71 @@ button{-webkit-tap-highlight-color:transparent}
  .final-stage{min-height:265px;padding:48px 8px 18px}.peanuts-slot{min-height:165px}.avatar-slot{min-height:126px}.woodstock-slot{width:54px;height:44px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Lily illustrations around each scene */
+.section,#welcome{position:relative;isolation:isolate}
+.section-inner,.welcome-card{position:relative;z-index:2}
+.floral-wrap{position:absolute;z-index:0;inset:0;overflow:hidden;pointer-events:none}
+.floral-sprig{position:absolute;width:clamp(118px,19vw,218px);height:auto;opacity:.9;filter:drop-shadow(0 5px 10px rgba(159,104,116,.09))}
+.floral-sprig-a{top:-34px;left:-34px;transform:rotate(-12deg)}
+.floral-sprig-b{right:-34px;bottom:-46px;transform:rotate(166deg) scale(.9)}
+#welcome .floral-sprig{width:clamp(145px,22vw,250px)}
+#welcome .floral-sprig-a{top:3%;left:1%}
+#welcome .floral-sprig-b{right:0;bottom:1%}
+#room .floral-sprig-a{top:-30px;left:-36px;transform:rotate(-17deg) scale(.8)}
+#room .floral-sprig-b{right:-30px;bottom:-50px;transform:rotate(166deg) scale(.72)}
+#letters .floral-sprig-a{top:0;left:0;transform:rotate(-10deg) scale(.82)}
+#letters .floral-sprig-b{right:0;bottom:-4px;transform:rotate(168deg) scale(.82)}
+#garden .floral-sprig{opacity:.34}
+#garden .floral-sprig-a{top:-54px;left:-48px;transform:rotate(-20deg) scale(.72)}
+#garden .floral-sprig-b{right:-48px;bottom:-54px;transform:rotate(160deg) scale(.72)}
+#together .floral-sprig-a{top:-24px;left:-32px;transform:rotate(-12deg) scale(.82)}
+#together .floral-sprig-b{right:-30px;bottom:-48px;transform:rotate(164deg) scale(.82)}
+
 </style>
 </head>
 <body>
 <section id="welcome">
+<div class="floral-wrap" aria-hidden="true">
+<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+ <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
+ <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
+</svg>
+<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+</svg>
+</div>
  <div class="welcome-card">
   <div class="welcome-art"><div class="sun"></div><div class="hill"></div></div>
   
@@ -144,6 +205,46 @@ button{-webkit-tap-highlight-color:transparent}
 </section>
 
 <section class="section" id="room">
+<div class="floral-wrap" aria-hidden="true">
+<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+ <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
+ <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
+</svg>
+<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+</svg>
+</div>
  <div class="section-inner">
   
   <div class="room-scene" aria-label="Illustrated cozy room with a window, sofa, lamp and side table">
@@ -162,6 +263,46 @@ button{-webkit-tap-highlight-color:transparent}
 </section>
 
 <section class="section" id="letters">
+<div class="floral-wrap" aria-hidden="true">
+<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+ <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
+ <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
+</svg>
+<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+</svg>
+</div>
  <div class="section-inner">
   
   <div class="envelopes">
@@ -171,11 +312,51 @@ button{-webkit-tap-highlight-color:transparent}
   </div>
  </div>
 </section>
-<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="letterTitle">
+<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Envelope">
  <div class="letter-card"><button class="close-modal" id="closeModal" aria-label="Close">×</button><h3 id="letterTitle"></h3><p id="letterBody" aria-live="polite"></p></div>
 </div>
 
 <section class="section" id="garden">
+<div class="floral-wrap" aria-hidden="true">
+<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+ <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
+ <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
+</svg>
+<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+</svg>
+</div>
  <div class="section-inner">
   
   <div class="garden-ground">
@@ -191,6 +372,46 @@ button{-webkit-tap-highlight-color:transparent}
 </section>
 
 <section class="section" id="together">
+<div class="floral-wrap" aria-hidden="true">
+<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+ <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
+ <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
+</svg>
+<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
+ <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
+ <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
+ <g transform="translate(128 113)">
+  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
+  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
+  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
+  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
+  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
+  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+ </g>
+</svg>
+</div>
  <div class="section-inner">
   
   <div class="final-stage">
@@ -223,7 +444,6 @@ selectOne("#roomMusicBtn")?.addEventListener("click", () => {
   music?.classList.remove("is-focused");
   requestAnimationFrame(() => music?.classList.add("is-focused"));
 });
-selectOne("#backTop")?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
 const roomScene = selectOne(".room-scene");
 const lampButton = selectOne("#lampBtn");
@@ -253,7 +473,7 @@ const closeLetter = () => {
 selectAll(".envelope").forEach((envelope) => {
   envelope.addEventListener("click", () => {
     const index = Number(envelope.dataset.letter);
-    if (!Number.isInteger(index) || !envelopeTitles[index] || !modal) return;
+    if (!Number.isInteger(index) || index < 0 || index > 2 || !modal) return;
     activeEnvelope?.classList.remove("is-open");
     activeEnvelope = envelope;
     envelope.classList.add("is-open");
@@ -288,7 +508,6 @@ let waterCount = 0;
 const flowerBeds = selectAll(".flower-bed");
 const waterButton = selectOne("#waterBtn");
 const counter = selectOne("#waterCount");
-const bloomMessage = selectOne("#bloomMessage");
 waterButton?.setAttribute("aria-label", "Water the flowers");
 counter?.setAttribute("aria-live", "polite");
 
