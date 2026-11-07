@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f4e6df">
-<title>A little place to rest</title>
+<title>heheheheylow</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
 :root{--paper:#fbf4eb;--cream:#f5e9dc;--rose:#d99a9b;--rose2:#edc5bf;--ink:#51443e;--muted:#8d7b71;--green:#87977b;--deepgreen:#586b59;--gold:#d9b77f;--line:rgba(103,79,67,.17);--shadow:0 22px 60px rgba(94,67,52,.12)}
@@ -152,6 +152,156 @@ button{-webkit-tap-highlight-color:transparent}
 #together .floral-sprig-b{right:-30px;bottom:-48px;transform:rotate(164deg) scale(.82)}
 
 .section-inner{position:relative;z-index:1}
+
+/* Final approved layout and floral illustrations */
+:root{--ink:#5b4248;--muted:#987c7e;--rose:#d995a2;--rose-soft:#f5d9dc;--cream:#fffaf4;--sage:#829a78;--deep-sage:#637c60}
+.section-head{position:relative;z-index:2;text-align:center;margin:0 auto 34px}
+.section-head h2{font:500 clamp(2.35rem,6vw,4rem)/1.05 'Playfair Display',serif;color:#74525b;letter-spacing:-.025em;margin:0}
+#welcome{min-height:100svh;padding:30px 18px;background:radial-gradient(ellipse at 50% 25%,#fffaf4 0%,#fae6e5 56%,#f1d4d5 100%)}
+.welcome-card{width:min(100%,640px);padding:42px 25px 46px;background:rgba(255,250,245,.9);border:1px solid rgba(203,145,154,.38);border-radius:5px;box-shadow:0 24px 70px rgba(144,93,102,.14);text-align:center}
+.welcome-art{height:150px;width:min(100%,300px);margin:0 auto 8px;position:relative}
+.welcome-sun{position:absolute;width:100px;height:100px;left:calc(50% - 50px);top:4px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff2cf,#e9c996 70%);opacity:.65}
+.welcome-bouquet{position:relative;width:100%;height:100%;filter:drop-shadow(0 7px 7px rgba(125,83,76,.12))}
+.welcome-kicker{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#a27d80;margin:0 0 10px}
+.welcome-card h1{font:500 clamp(2.75rem,8vw,4.8rem)/1.05 'Playfair Display',serif;color:#684b53;margin:0 0 12px}
+.welcome-message{font:italic 1.13rem/1.7 'Playfair Display',serif;color:#937477;margin:0 auto 24px;max-width:390px}
+.welcome-card .btn{min-width:140px}
+#letters{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff8f2 0%,#f9e7e4 100%)}
+.letter-florals{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.letter-sprig{position:absolute;width:220px;height:270px;opacity:.75}
+.letter-sprig:before,.letter-sprig:after{content:"";position:absolute;width:90px;height:130px;border:2px solid #91a986;border-color:transparent transparent #91a986 #91a986;border-radius:0 0 0 100%;transform:rotate(-24deg)}
+.letter-sprig:after{top:95px;left:78px;transform:rotate(150deg);border-color:transparent #91a986 #91a986 transparent}
+.letter-sprig-left{top:-35px;left:-45px;transform:rotate(-18deg)}
+.letter-sprig-right{right:-45px;bottom:-45px;transform:rotate(162deg)}
+.envelopes{width:min(100%,900px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin:0 auto;position:relative;z-index:1}
+.envelope{height:190px;max-width:250px;width:100%;margin:auto;position:relative;border:0;background:transparent;cursor:pointer;perspective:800px;transition:transform .25s ease;filter:drop-shadow(0 10px 12px rgba(151,99,109,.12))}
+.envelope:hover{transform:translateY(-5px)}
+.env-paper{position:absolute;inset:18px 8px 7px;background:linear-gradient(145deg,#f5dadd,#eabfc6);border:1px solid rgba(188,121,136,.22);border-radius:4px}
+.env-paper:before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,transparent 49.5%,#dbaab4 50%),linear-gradient(220deg,transparent 49.5%,#e4b5be 50%);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.env-flap{position:absolute;left:8px;right:8px;top:18px;height:100px;background:linear-gradient(150deg,#fff0ec,#f5dadd);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .55s ease;filter:drop-shadow(0 2px 1px rgba(125,72,83,.1))}
+.env-lily{position:absolute;left:50%;top:92px;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#b87383;background:#fff4ed;border:1px solid rgba(187,126,140,.26);font-size:19px;z-index:2}
+.envelope.is-open .env-flap{transform:rotateX(180deg)}
+.letter-modal{position:fixed;inset:0;z-index:30;background:rgba(71,49,53,.5);backdrop-filter:blur(6px);display:none;place-items:center;padding:18px}
+.letter-modal.show{display:grid}
+.letter-card{position:relative;width:min(100%,480px);max-height:min(82svh,620px);overflow:auto;padding:55px 34px 42px;background:#fff9f2;border:1px solid #edcbd0;border-radius:5px;box-shadow:0 28px 75px rgba(91,55,61,.28);text-align:center}
+.letter-card:before{content:"";position:absolute;inset:11px;border:1px solid #f0d9d6;pointer-events:none}
+.letter-card h3{display:none}
+.letter-card p{position:relative;z-index:1;white-space:pre-line;font:1.08rem/1.9 'Playfair Display',serif;color:#76545b;margin:0}
+.close-modal{position:absolute;right:16px;top:14px;z-index:2;display:grid;width:36px;height:36px;place-items:center;border:0;border-radius:50%;background:#f8e4e3;color:#76545b;font-size:1.4rem;cursor:pointer}
+#music{overflow:hidden;background:linear-gradient(180deg,#f5e4df 0%,#f9eee5 100%)}
+.music-inner{display:grid;place-items:center;min-height:350px}
+.music-floral{position:absolute;z-index:0;width:clamp(125px,20vw,220px);opacity:.8;pointer-events:none;filter:drop-shadow(0 7px 8px rgba(136,91,95,.1))}
+.music-floral .flower-svg{height:auto}
+.music-floral-left{left:2%;bottom:2%;transform:rotate(-12deg)}
+.music-floral-right{right:2%;top:2%;transform:rotate(12deg)}
+.vintage-player{position:relative;z-index:1;width:min(100%,550px);padding:20px 23px 18px;border:2px solid #b58b70;border-radius:13px;background:linear-gradient(145deg,#f1d8c2,#e8c5aa 48%,#d8ad91);box-shadow:inset 0 0 0 4px rgba(255,247,231,.62),0 20px 48px rgba(116,78,68,.18)}
+.player-topline{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:13px;color:#80604d}
+.player-dot{width:5px;height:5px;border-radius:50%;background:#b7797b;box-shadow:0 0 0 3px rgba(255,247,231,.55)}
+.player-label-small{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase}
+.player-display{display:grid;place-items:center;padding:16px 12px;border:1px solid rgba(120,82,62,.25);border-radius:7px;background:linear-gradient(135deg,#9a7865,#b38d75);box-shadow:inset 0 3px 9px rgba(65,40,30,.2)}
+.player-screen{width:min(100%,360px);padding:6px;background:#fff9f3;border:1px solid #d8b99c;border-radius:4px;box-shadow:0 5px 14px rgba(65,40,30,.18)}
+.player-screen iframe{display:block;width:100%;height:150px;border:0;border-radius:2px}
+.player-bottom{display:flex;align-items:center;gap:16px;margin-top:14px;padding:0 3px}
+.player-track{display:flex;flex-direction:column;gap:2px;min-width:100px}
+.player-track-name{font:500 1.05rem 'Playfair Display',serif;color:#654c43}
+.player-track-artist{font-size:.72rem;color:#80685b}
+.player-speaker{display:flex;align-items:center;gap:4px;margin-left:auto}
+.player-speaker i{width:3px;height:17px;border-radius:3px;background:#98755f;opacity:.75}
+.player-speaker i:nth-child(2n){height:24px}.player-speaker i:nth-child(3n){height:12px}
+.player-knob{width:34px;height:34px;border-radius:50%;border:3px solid #c19a76;background:radial-gradient(circle at 35% 30%,#fff1d9,#9d765d 70%);box-shadow:inset 0 1px 3px rgba(70,45,32,.25),0 2px 3px rgba(80,49,35,.18);display:grid;place-items:center}
+.player-knob span{width:2px;height:9px;border-radius:2px;background:#6e5143;transform:translateY(-5px)}
+#garden{overflow:hidden;background:linear-gradient(180deg,#fff7f2 0%,#f1efdf 58%,#e6eddd 100%)}
+.garden-heading{margin-bottom:12px}
+.garden-layout{position:relative;isolation:isolate;max-width:1050px;margin:0 auto}
+.garden-notes{position:absolute;inset:0;z-index:3;pointer-events:none}
+.garden-note{position:absolute;margin:0;max-width:280px;color:#875f70;font:italic clamp(.92rem,1.7vw,1.18rem)/1.35 'Playfair Display',serif;text-shadow:0 1px 0 rgba(255,255,255,.8);letter-spacing:.005em}
+.note-one{top:2%;left:4%;transform:rotate(-8deg)}
+.note-two{top:1%;right:4%;max-width:255px;transform:rotate(5deg);text-align:right}
+.note-three{top:42%;left:-1%;max-width:205px;transform:rotate(-5deg)}
+.note-four{top:41%;right:-1%;max-width:225px;transform:rotate(4deg);text-align:right}
+.note-five{bottom:-1%;left:12%;transform:rotate(-4deg);font-size:1.14rem}
+.garden-ground{position:relative;z-index:1;margin:90px 3% 72px;min-height:430px;overflow:hidden;border:1px solid rgba(120,145,106,.22);border-radius:42% 42% 12px 12px/11% 11% 12px 12px;background:linear-gradient(180deg,#e5eddf 0%,#dce8d3 46%,#b4c9a4 47%,#96b187 100%);box-shadow:inset 0 14px 25px rgba(255,255,255,.42),0 13px 35px rgba(97,124,87,.10)}
+.garden-ground:before{content:"";position:absolute;left:0;right:0;bottom:0;height:28%;background:linear-gradient(180deg,rgba(117,151,100,.1),rgba(88,122,80,.28));border-top:1px solid rgba(103,133,91,.18)}
+.garden-ground:after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;background:repeating-linear-gradient(174deg,transparent 0 13px,rgba(240,244,219,.45) 14px 15px,transparent 16px 25px)}
+.garden-bed-row{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;justify-items:center;gap:clamp(4px,2vw,24px);min-height:390px;padding:22px 26px 28px}
+.flower-bed{width:min(100%,160px);height:300px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;position:relative;filter:drop-shadow(0 7px 5px rgba(49,77,48,.12));transform:rotate(-2deg)}
+.flower-bed:nth-child(2){transform:rotate(3deg) translateY(7px)}
+.flower-bed:nth-child(3){transform:rotate(-4deg) translateY(-3px)}
+.flower-bed:nth-child(4){transform:rotate(2deg) translateY(10px)}
+.flower-svg{width:100%;height:250px;overflow:visible}
+.flower-stem{fill:none;stroke:#63845f;stroke-width:5;stroke-linecap:round}
+.flower-leaf{fill:url(#garden-lily-one-leaf);stroke:#64865f;stroke-width:1.6}
+.leaf-vein{fill:none;stroke:#d6e0c7;stroke-width:1.7;stroke-linecap:round;opacity:.75}
+.flower-bloom{transform:scale(.16);transform-origin:75px 110px;transform-box:view-box;opacity:.25;transition:transform 1.15s cubic-bezier(.2,.75,.25,1),opacity .75s ease}
+.flower-bed.bloomed .flower-bloom{transform:scale(1);opacity:1}
+.flower-bed.bloomed .flower-bloom path{filter:drop-shadow(0 2px 2px rgba(148,87,105,.12))}
+.flower-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#536f51;margin-top:5px;font-weight:600}
+.scattered-petal{position:absolute;z-index:2;width:19px;height:9px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#fff1ec,#e5a6b5);opacity:.86;transform:rotate(24deg)}
+.petal-a{top:33%;left:12%;transform:rotate(28deg)}.petal-b{top:61%;left:28%;transform:rotate(75deg)}
+.petal-c{top:48%;right:17%;transform:rotate(12deg)}.petal-d{bottom:18%;right:34%;transform:rotate(58deg)}
+.garden-grass{position:absolute;z-index:1;bottom:10px;width:110px;height:100px;opacity:.7;background:repeating-linear-gradient(76deg,transparent 0 9px,#718d68 10px 12px,transparent 13px 22px);clip-path:polygon(50% 0,57% 100%,0 100%)}
+.grass-left{left:1%}.grass-right{right:1%;transform:scaleX(-1)}
+.butterfly{position:absolute;z-index:4;width:30px;height:24px;opacity:0;pointer-events:none}
+.butterfly-one{top:29%;left:20%}.butterfly-two{top:20%;right:19%}
+.butterfly.show{opacity:1;animation:butterfly-float 6.5s ease-in-out infinite alternate}
+.butterfly:before,.butterfly:after{content:"";position:absolute;width:15px;height:19px;border-radius:95% 10% 80% 20%;background:#f6dba9;transform-origin:100% 80%;animation:butterfly-flap .28s ease-in-out infinite alternate}
+.butterfly:after{left:13px;transform:scaleX(-1);background:#e7aab7}
+@keyframes butterfly-flap{to{transform:scaleY(.55) rotate(15deg)}}
+@keyframes butterfly-float{0%{translate:0 0;rotate:-8deg}50%{translate:55px -28px;rotate:12deg}100%{translate:110px 8px;rotate:-6deg}}
+.water-btn{display:block;margin:0 auto;min-width:190px}
+.water-count{text-align:center;color:#6d8465;font-size:.82rem;margin-top:12px;font-variant-numeric:tabular-nums}
+#together{overflow:hidden;background:linear-gradient(180deg,#f7e9e5 0%,#f2ded4 55%,#e9eadb 100%)}
+.final-heading{margin-bottom:28px}
+.final-heading h2{font-size:clamp(2rem,5.5vw,3.6rem);max-width:850px;margin:auto}
+.final-stage{position:relative;isolation:isolate;width:100%;max-width:1000px;min-height:440px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,.9fr);align-items:end;gap:12px;overflow:hidden;padding:70px 7% 58px;border:1px solid #e6c9b9;border-radius:45% 45% 12px 12px/14% 14% 12px 12px;background:radial-gradient(ellipse at 50% 22%,#fffaf2 0%,#f7e6dc 66%,#e7d3c0 100%);box-shadow:0 22px 55px rgba(143,93,102,.13)}
+.final-garden-glow{position:absolute;z-index:0;inset:0;background:radial-gradient(ellipse at 50% 78%,rgba(169,190,151,.42),transparent 65%);pointer-events:none}
+.final-garden-floor{position:absolute;z-index:0;left:0;right:0;bottom:0;height:105px;background:linear-gradient(180deg,rgba(165,190,147,.1),#a9bf98 35%,#91ad82 100%);border-top:1px solid rgba(110,144,100,.25)}
+.final-garden-flowers{position:absolute;z-index:1;left:0;right:0;bottom:0;height:175px;pointer-events:none}
+.final-garden-flowers svg{width:100%;height:100%;display:block;overflow:visible}
+.art-slot{position:relative;z-index:3;min-width:0;width:100%;background:transparent;border:0;backdrop-filter:none}
+.art-slot img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center bottom}
+.peanuts-slot{grid-column:1;grid-row:1;height:280px;min-height:220px}
+.avatar-slot{grid-column:2;grid-row:1;height:245px;min-height:200px}
+.woodstock-slot{position:absolute;z-index:4;top:9%;right:13%;width:clamp(58px,10vw,100px);height:clamp(48px,8vw,76px);min-height:0;margin:0;animation:woodstockFloat 4.5s ease-in-out infinite}
+@keyframes woodstockFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-9px) rotate(5deg)}}
+@media(max-width:760px){
+ .welcome-card{padding:36px 20px 40px}
+ .envelopes{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+ .envelope{height:165px;max-width:220px}
+ .music-inner{min-height:330px}
+ .music-floral-left{left:-35px;bottom:0;opacity:.55}.music-floral-right{right:-35px;top:0;opacity:.55}
+ .vintage-player{padding:16px 14px}
+ .player-screen{width:min(100%,320px)}
+ .garden-notes{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 20px;margin:0 auto 22px;padding:0 8px}
+ .garden-note{position:relative;inset:auto!important;max-width:46%;font-size:.93rem;text-align:center!important}
+ .garden-note:nth-child(2n){transform:rotate(3deg)}.garden-note:nth-child(2n+1){transform:rotate(-4deg)}
+ .garden-ground{margin:10px 0 34px;min-height:400px;border-radius:28% 28% 9px 9px/7% 7% 9px 9px}
+ .garden-bed-row{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:0;min-height:390px;padding:16px 12px 20px}
+ .flower-bed{height:185px;max-width:128px}.flower-svg{height:145px}
+ .flower-bed:nth-child(3){transform:rotate(-4deg) translateY(-3px)}
+ .flower-bed:nth-child(4){transform:rotate(2deg) translateY(4px)}
+ .note-five{max-width:100%}
+ .final-stage{min-height:330px;padding:54px 5% 45px;grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:5px}
+ .peanuts-slot{height:205px;min-height:165px}.avatar-slot{height:180px;min-height:150px}
+ .woodstock-slot{top:6%;right:8%;width:66px;height:54px}
+}
+@media(max-width:430px){
+ .section{padding-inline:16px}
+ .section-head h2{font-size:2.45rem}
+ .envelopes{gap:8px}.envelope{height:150px}
+ .env-lily{top:82px}
+ .player-bottom{gap:10px}.player-speaker{gap:3px}.player-speaker i{height:13px}.player-speaker i:nth-child(2n){height:18px}
+ .garden-note{max-width:100%;width:100%;font-size:.92rem}
+ .garden-ground{min-height:365px;margin-bottom:28px}
+ .garden-bed-row{padding-inline:7px}
+ .flower-bed{height:170px;max-width:114px}.flower-svg{height:130px}
+ .final-heading h2{font-size:2.05rem}
+ .final-stage{min-height:275px;padding:50px 3% 36px}
+ .peanuts-slot{min-height:142px;height:165px}.avatar-slot{min-height:130px;height:145px}
+ .woodstock-slot{width:54px;height:44px}
+}
+@media(prefers-reduced-motion:reduce){.flower-bloom,.butterfly,.woodstock-slot{transition:none!important;animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -197,266 +347,327 @@ button{-webkit-tap-highlight-color:transparent}
 </svg>
 </div>
  <div class="welcome-card">
-  <div class="welcome-art"><div class="sun"></div><div class="hill"></div></div>
-  
-  
-  
-  <button class="btn primary" id="enterBtn">Come on in</button>
- </div>
-</section>
-
-<section class="section" id="room">
-<div class="floral-wrap" aria-hidden="true">
-<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
- <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
- <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <g transform="translate(128 113)">
-  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
-  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
-  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
-  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
-  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
- </g>
- <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
- <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
-</svg>
-<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
- <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
- <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <g transform="translate(128 113)">
-  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
-  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
-  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
-  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
-  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
- </g>
-</svg>
-</div>
- <div class="section-inner">
-  
-  <div class="room-scene" aria-label="Illustrated cozy room with a window, sofa, lamp and side table">
-   <div class="room-wallpaper"></div><div class="window"><div class="curtain"></div><div class="curtain right"></div></div><div class="sunlight"></div>
-   <div class="picture"><svg viewBox="0 0 80 90" aria-hidden="true"><path d="M12 70 Q25 25 40 53 Q53 14 69 70" fill="none" stroke="#83957a" stroke-width="3"/><path d="M39 53 Q25 42 20 30 M40 52 Q55 40 60 27" fill="none" stroke="#83957a" stroke-width="2"/><circle cx="20" cy="30" r="5" fill="#d69b99"/><circle cx="60" cy="27" r="5" fill="#d69b99"/></svg></div>
-   <div class="shelf"></div><div class="lamp-glow"></div><div class="lamp"><div class="shade"></div><div class="stem"></div><div class="base"></div></div>
-   <div class="rug"></div><div class="sofa"></div><div class="cushion"></div><div class="throw"></div><div class="table"></div><div class="book"></div>
+    <div class="welcome-art" aria-hidden="true">
+      <div class="welcome-sun"></div>
+      <svg class="welcome-bouquet" viewBox="0 0 220 150" role="presentation" aria-hidden="true">
+        <path d="M110 145 C104 112 91 82 64 45 M110 145 C111 105 131 77 157 39 M110 145 C111 102 109 70 110 24" fill="none" stroke="#78936f" stroke-width="3" stroke-linecap="round"/>
+        <path d="M99 115 C73 91 47 94 38 109 C59 128 81 130 99 115Z M116 105 C143 82 169 84 180 99 C160 119 137 122 116 105Z" fill="#a8bd9c" stroke="#78936f" stroke-width="2"/>
+        <g transform="translate(64 43)">
+          <path d="M0 7 C-16 -9 -15 -33 0 -47 C15 -33 16 -9 0 7Z" fill="#f6dce0" stroke="#ce929b" stroke-width="1.5"/>
+          <path d="M-3 6 C-28 2 -38 -16 -29 -31 C-12 -27 -4 -10 -3 6Z M3 6 C28 2 38 -16 29 -31 C12 -27 4 -10 3 6Z" fill="#edb8c2" stroke="#ce929b" stroke-width="1.5"/>
+          <path d="M0 5 C-10 17 -8 30 0 36 C8 30 10 17 0 5Z" fill="#f8e5e6" stroke="#ce929b" stroke-width="1.5"/>
+          <path d="M0 4 L0 -27 M-2 5 L-16 -16 M2 5 L16 -16" stroke="#d2a455" stroke-width="1.7" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(157 39)">
+          <path d="M0 7 C-15 -7 -14 -31 0 -42 C14 -31 15 -7 0 7Z" fill="#f8dfe2" stroke="#ce929b" stroke-width="1.5"/>
+          <path d="M-3 6 C-25 2 -34 -13 -26 -28 C-12 -25 -4 -9 -3 6Z M3 6 C25 2 34 -13 26 -28 C12 -25 4 -9 3 6Z" fill="#edb8c2" stroke="#ce929b" stroke-width="1.5"/>
+          <path d="M0 5 C-9 16 -7 27 0 33 C7 27 9 16 0 5Z" fill="#f8e5e6" stroke="#ce929b" stroke-width="1.5"/>
+        </g>
+        <g transform="translate(110 24)">
+          <path d="M0 8 C-17 -8 -16 -38 0 -52 C16 -38 17 -8 0 8Z" fill="#f5d3db" stroke="#ce929b" stroke-width="1.5"/>
+          <path d="M-3 7 C-29 2 -39 -16 -29 -32 C-13 -28 -4 -10 -3 7Z M3 7 C29 2 39 -16 29 -32 C13 -28 4 -10 3 7Z" fill="#f0bec8" stroke="#ce929b" stroke-width="1.5"/>
+          <path d="M0 5 C-10 18 -8 31 0 38 C8 31 10 18 0 5Z" fill="#fae7e8" stroke="#ce929b" stroke-width="1.5"/>
+        </g>
+      </svg>
+    </div>
+    <p class="welcome-kicker">a little place to feel welcome</p>
+    <h1>heheheheylow</h1>
+    <p class="welcome-message">wag mow panzinin yon, andito naman akohw</p>
+    <button class="btn primary" id="enterBtn">Open</button>
   </div>
-  <div class="room-controls"><button class="btn" id="lampBtn" aria-pressed="false">Turn the lamp on</button><button class="btn" id="roomMusicBtn">Find the music</button><button class="btn" id="gardenJump">Visit the garden</button></div>
-  <div class="music-panel" id="music">
-   <h3>Sagip · Jan Roberts</h3>
-   <iframe title="Sagip by Jan Roberts on Apple Music" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/sagip/1725956332"></iframe>
-   
+</section></section>
+
+<section class="section" id="music">
+  <div class="music-floral music-floral-left" aria-hidden="true">
+    
+<svg class="flower-svg" viewBox="0 0 150 250" role="img" aria-label="Pink lily">
+ <defs>
+  <linearGradient id="music-lily-left-petal" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#fff0ef"/><stop offset=".48" stop-color="#f4cbd2"/><stop offset="1" stop-color="#d98e9f"/>
+  </linearGradient>
+  <linearGradient id="music-lily-left-leaf" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#bed0ad"/><stop offset="1" stop-color="#678a66"/>
+  </linearGradient>
+ </defs>
+ <path class="flower-stem" d="M75 238 C72 190 81 151 76 107"/>
+ <path class="flower-leaf" d="M76 204 C40 171 18 175 13 191 C34 216 58 220 76 204Z"/>
+ <path class="leaf-vein" d="M22 191 Q48 194 73 205"/>
+ <path class="flower-leaf" d="M77 178 C111 144 136 150 139 167 C116 190 94 192 77 178Z"/>
+ <path class="leaf-vein" d="M132 165 Q103 170 78 180"/>
+ <path class="flower-leaf" d="M75 224 C52 205 43 206 35 215 C48 235 63 239 75 224Z"/>
+ <g class="flower-bloom">
+  <path d="M75 113 C42 83 39 36 68 9 C85 31 91 78 75 113Z" fill="url(#music-lily-left-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M74 111 C26 109 2 77 20 42 C49 46 72 78 74 111Z" fill="url(#music-lily-left-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M76 111 C124 109 148 77 130 42 C101 46 78 78 76 111Z" fill="url(#music-lily-left-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M73 112 C33 133 2 119 4 86 C33 73 61 88 73 112Z" fill="#f7dce0" stroke="#c98194" stroke-width="2"/>
+  <path d="M77 112 C117 133 148 119 146 86 C117 73 89 88 77 112Z" fill="#efbdc8" stroke="#c98194" stroke-width="2"/>
+  <path d="M75 111 C47 138 48 174 75 186 C102 174 103 138 75 111Z" fill="#fbe8e8" stroke="#c98194" stroke-width="2"/>
+  <path d="M75 119 Q72 144 75 170 M71 116 Q55 130 48 144 M79 116 Q95 130 102 144" fill="none" stroke="#d88f9f" stroke-width="1.4" opacity=".8"/>
+  <g stroke="#d4a24d" stroke-width="2" stroke-linecap="round">
+   <path d="M75 129 L75 83 M74 131 L53 94 M76 131 L96 94 M73 132 L35 110 M77 132 L115 110"/>
+  </g>
+  <g fill="#d6a34d">
+   <ellipse cx="75" cy="81" rx="4" ry="2.6"/><ellipse cx="52" cy="92" rx="4" ry="2.6" transform="rotate(35 52 92)"/>
+   <ellipse cx="97" cy="92" rx="4" ry="2.6" transform="rotate(-35 97 92)"/><ellipse cx="34" cy="108" rx="4" ry="2.6" transform="rotate(35 34 108)"/>
+   <ellipse cx="116" cy="108" rx="4" ry="2.6" transform="rotate(-35 116 108)"/>
+  </g>
+ </g>
+</svg>
   </div>
- </div>
-</section>
-
-<section class="section" id="letters">
-<div class="floral-wrap" aria-hidden="true">
-<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
- <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
- <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <g transform="translate(128 113)">
-  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
-  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
-  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
-  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
-  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
- </g>
- <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
- <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
-</svg>
-<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
- <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
- <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <g transform="translate(128 113)">
-  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
-  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
-  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
-  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
-  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
+  <div class="music-floral music-floral-right" aria-hidden="true">
+    
+<svg class="flower-svg" viewBox="0 0 150 250" role="img" aria-label="Pink tulip">
+ <defs>
+  <linearGradient id="music-tulip-right-petal" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#fff0ef"/><stop offset=".5" stop-color="#ecacbb"/><stop offset="1" stop-color="#cb7189"/>
+  </linearGradient>
+  <linearGradient id="music-tulip-right-leaf" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#c1d0ae"/><stop offset="1" stop-color="#6d8d68"/>
+  </linearGradient>
+ </defs>
+ <path class="flower-stem" d="M75 240 C82 191 72 151 75 114"/>
+ <path class="flower-leaf" d="M77 218 C45 185 20 177 12 193 C35 225 57 235 77 218Z"/>
+ <path class="leaf-vein" d="M18 196 Q48 204 76 220"/>
+ <path class="flower-leaf" d="M76 190 C107 154 131 151 138 169 C120 197 99 209 76 190Z"/>
+ <path class="leaf-vein" d="M132 170 Q105 183 78 192"/>
+ <g class="flower-bloom">
+  <path d="M29 119 C22 77 36 38 58 28 C65 52 67 86 75 119Z" fill="url(#music-tulip-right-petal)" stroke="#c7778c" stroke-width="2"/>
+  <path d="M53 120 C49 64 60 17 77 8 C91 40 88 88 78 120Z" fill="#f8d9df" stroke="#c7778c" stroke-width="2"/>
+  <path d="M76 120 C83 67 101 26 119 32 C126 70 107 105 76 120Z" fill="url(#music-tulip-right-petal)" stroke="#c7778c" stroke-width="2"/>
+  <path d="M28 117 Q75 146 122 117 C113 153 94 166 75 163 C54 166 37 151 28 117Z" fill="#f2c2cd" stroke="#c7778c" stroke-width="2"/>
+  <path d="M42 115 Q75 132 108 115" fill="none" stroke="#fff0ef" stroke-width="2" opacity=".8"/>
+  <path d="M75 121 Q74 140 75 155" fill="none" stroke="#d9859a" stroke-width="1.5"/>
  </g>
 </svg>
-</div>
- <div class="section-inner">
-  
-  <div class="envelopes">
-   <button class="envelope" data-letter="0" aria-label="Open first envelope"><span class="env-paper"></span><span class="env-flap"></span></button>
-   <button class="envelope" data-letter="1" aria-label="Open second envelope"><span class="env-paper"></span><span class="env-flap"></span></button>
-   <button class="envelope" data-letter="2" aria-label="Open third envelope"><span class="env-paper"></span><span class="env-flap"></span></button>
   </div>
- </div>
-</section>
-<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Envelope">
- <div class="letter-card"><button class="close-modal" id="closeModal" aria-label="Close">×</button><h3 id="letterTitle"></h3><p id="letterBody" aria-live="polite"></p></div>
-</div>
-
-<section class="section" id="garden">
-<div class="floral-wrap" aria-hidden="true">
-<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
- <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
- <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <g transform="translate(128 113)">
-  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
-  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
-  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
-  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
-  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
- </g>
- <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
- <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
-</svg>
-<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
- <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
- <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <g transform="translate(128 113)">
-  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
-  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
-  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
-  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
-  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
- </g>
-</svg>
-</div>
- <div class="section-inner">
-  
-  <div class="garden-ground">
-   <div class="butterfly" id="butterflyA"></div><div class="butterfly" id="butterflyB" style="left:18%;top:32%;animation-delay:-2s"></div>
-   <div class="flower-bed lily" data-flower="lily"><svg class="flower-svg" viewBox="0 0 120 190" aria-label="Pink lily"><path class="stem" d="M60 175 Q56 120 60 77"/><path class="leaf" d="M59 135 Q17 103 19 135 Q39 153 59 135Z"/><path class="leaf" d="M60 116 Q99 87 102 112 Q83 133 60 116Z"/><g class="bud"><path class="petal" d="M60 70 Q24 32 45 12 Q60 19 60 70Z"/><path class="petal" d="M60 70 Q96 32 75 12 Q60 19 60 70Z"/><path class="petal" d="M60 70 Q15 65 29 38 Q49 35 60 70Z"/><path class="petal" d="M60 70 Q105 65 91 38 Q71 35 60 70Z"/><path class="petal" d="M60 70 Q42 1 60 3 Q78 1 60 70Z"/><circle cx="60" cy="49" r="5" fill="#c58b6c"/></g></svg><div class="label">lily</div></div>
-   <div class="flower-bed tulip" data-flower="tulip"><svg class="flower-svg" viewBox="0 0 120 190" aria-label="Pink tulip"><path class="stem" d="M60 175 Q64 120 60 70"/><path class="leaf" d="M60 145 Q14 103 22 146 Q43 161 60 145Z"/><path class="leaf" d="M62 125 Q100 96 101 126 Q83 146 62 125Z"/><g class="bud"><path class="petal" d="M35 67 Q28 22 48 28 Q54 39 60 67Z"/><path class="petal" d="M60 67 Q54 14 70 23 Q79 40 60 67Z"/><path class="petal" d="M60 67 Q75 19 91 31 Q95 52 60 67Z"/><path class="petal" d="M35 67 Q60 83 91 67 Q76 96 60 85 Q44 96 35 67Z"/></g></svg><div class="label">tulip</div></div>
-   <div class="flower-bed lily" data-flower="lily2"><svg class="flower-svg" viewBox="0 0 120 190" aria-label="Pink lily"><path class="stem" d="M60 175 Q55 120 60 77"/><path class="leaf" d="M59 135 Q17 103 19 135 Q39 153 59 135Z"/><path class="leaf" d="M60 116 Q99 87 102 112 Q83 133 60 116Z"/><g class="bud"><path class="petal" d="M60 70 Q24 32 45 12 Q60 19 60 70Z"/><path class="petal" d="M60 70 Q96 32 75 12 Q60 19 60 70Z"/><path class="petal" d="M60 70 Q15 65 29 38 Q49 35 60 70Z"/><path class="petal" d="M60 70 Q105 65 91 38 Q71 35 60 70Z"/><path class="petal" d="M60 70 Q42 1 60 3 Q78 1 60 70Z"/><circle cx="60" cy="49" r="5" fill="#c58b6c"/></g></svg><div class="label">lily</div></div>
-   <div class="flower-bed tulip" data-flower="tulip2"><svg class="flower-svg" viewBox="0 0 120 190" aria-label="Pink tulip"><path class="stem" d="M60 175 Q64 120 60 70"/><path class="leaf" d="M60 145 Q14 103 22 146 Q43 161 60 145Z"/><path class="leaf" d="M62 125 Q100 96 101 126 Q83 146 62 125Z"/><g class="bud"><path class="petal" d="M35 67 Q28 22 48 28 Q54 39 60 67Z"/><path class="petal" d="M60 67 Q54 14 70 23 Q79 40 60 67Z"/><path class="petal" d="M60 67 Q75 19 91 31 Q95 52 60 67Z"/><path class="petal" d="M35 67 Q60 83 91 67 Q76 96 60 85 Q44 96 35 67Z"/></g></svg><div class="label">tulip</div></div>
+  <div class="section-inner music-inner">
+    <div class="vintage-player" aria-label="Vintage music player">
+      <div class="player-topline"><span class="player-dot"></span><span class="player-label-small">now playing</span><span class="player-dot"></span></div>
+      <div class="player-display">
+        <div class="player-screen">
+          <iframe title="Sagip by Jan Roberts on Apple Music" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/sagip/1725956332"></iframe>
+        </div>
+      </div>
+      <div class="player-bottom">
+        <div class="player-track"><span class="player-track-name">Sagip</span><span class="player-track-artist">Jan Roberts</span></div>
+        <div class="player-speaker" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="player-knob" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
   </div>
-  <button class="btn primary water-btn" id="waterBtn">Water the flowers</button><div class="water-count" id="waterCount" aria-live="polite">0 / 4</div>
-  
- </div>
-</section>
-
-<section class="section" id="together">
-<div class="floral-wrap" aria-hidden="true">
-<svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
- <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
- <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <g transform="translate(128 113)">
-  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
-  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
-  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
-  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
-  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
- </g>
- <path d="M60 111 C42 94 43 68 62 52 C81 65 83 93 60 111Z" fill="#f2c5ce" stroke="#d992a0" stroke-width="2"/>
- <path d="M60 106 Q62 83 62 63" stroke="#d992a0" stroke-width="1.5" fill="none"/>
-</svg>
-<svg class="floral-sprig floral-sprig-b" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
- <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
- <path d="M121 256 C82 224 50 225 30 240 C56 263 92 269 121 256Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M127 224 C163 190 194 184 219 194 C199 222 161 236 127 224Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <path d="M126 180 C93 149 75 133 61 103 C94 116 118 144 126 180Z" fill="#aabd9d" stroke="#78936f" stroke-width="2"/>
- <path d="M130 150 C153 118 174 109 196 114 C181 139 157 153 130 150Z" fill="#b7c9a8" stroke="#78936f" stroke-width="2"/>
- <g transform="translate(128 113)">
-  <path d="M0 14 C-25 -13 -23 -63 0 -91 C23 -63 25 -13 0 14Z" fill="#f7d9df" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-4 14 C-43 5 -72 -28 -63 -62 C-35 -58 -11 -23 -4 14Z" fill="#efb9c5" stroke="#d992a0" stroke-width="2"/>
-  <path d="M4 14 C43 5 72 -28 63 -62 C35 -58 11 -23 4 14Z" fill="#f2c8d0" stroke="#d992a0" stroke-width="2"/>
-  <path d="M-5 12 C-49 25 -81 6 -82 -26 C-51 -37 -18 -12 -5 12Z" fill="#f6d2d8" stroke="#d992a0" stroke-width="2"/>
-  <path d="M5 12 C49 25 81 6 82 -26 C51 -37 18 -12 5 12Z" fill="#edb2bf" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 10 C-21 37 -15 65 0 79 C15 65 21 37 0 10Z" fill="#f8dfe2" stroke="#d992a0" stroke-width="2"/>
-  <path d="M0 3 Q-3 -24 0 -48 M-2 5 Q-20 -12 -40 -30 M2 5 Q20 -12 40 -30" fill="none" stroke="#df9eaa" stroke-width="1.8" opacity=".75"/>
-  <path d="M-4 4 L-25 -27 M0 4 L0 -44 M4 4 L25 -27 M-3 5 L-43 -23 M3 5 L43 -23" stroke="#d5a34f" stroke-width="2" stroke-linecap="round"/>
-  <g fill="#d8aa59"><ellipse cx="-25" cy="-28" rx="4" ry="2.5" transform="rotate(35 -25 -28)"/><ellipse cx="0" cy="-45" rx="4" ry="2.5"/><ellipse cx="25" cy="-28" rx="4" ry="2.5" transform="rotate(-35 25 -28)"/><ellipse cx="-43" cy="-24" rx="4" ry="2.5" transform="rotate(35 -43 -24)"/><ellipse cx="43" cy="-24" rx="4" ry="2.5" transform="rotate(-35 43 -24)"/></g>
- </g>
-</svg>
-</div>
- <div class="section-inner">
-  
-  <div class="final-stage">
-   <div class="final-garden-glow" aria-hidden="true"></div>
-   <!-- Add your unchanged group artwork inside this position when you are ready. -->
-   <div class="art-slot peanuts-slot" role="img" aria-label="Reserved position for the Peanuts friends group image"></div>
-   <!-- Add your avatar image inside this position when you are ready. -->
-   <div class="art-slot avatar-slot" role="img" aria-label="Reserved position for your avatar image"></div>
-   <!-- Add your unchanged Woodstock image inside this position when you are ready. -->
-   <div class="art-slot woodstock-slot" role="img" aria-label="Reserved position for the flying Woodstock image"></div>
+</section><section class="section" id="letters">
+  <div class="letter-florals" aria-hidden="true">
+    <span class="letter-sprig letter-sprig-left"></span>
+    <span class="letter-sprig letter-sprig-right"></span>
   </div>
-  
- </div>
+  <div class="section-inner">
+    <header class="section-head"><h2>reminder :P</h2></header>
+    <div class="envelopes">
+      <button class="envelope" data-letter="0" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
+      <button class="envelope" data-letter="1" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
+      <button class="envelope" data-letter="2" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
+      <button class="envelope" data-letter="3" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
+      <button class="envelope" data-letter="4" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
+      <button class="envelope" data-letter="5" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
+    </div>
+  </div>
 </section>
-
-
-<script>
-
+<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Reminder">
+  <div class="letter-card"><button class="close-modal" id="closeModal" aria-label="Close">×</button><h3 id="letterTitle"></h3><p id="letterBody" aria-live="polite"></p></div>
+</div><section class="section" id="garden">
+  <div class="section-inner">
+    <header class="section-head garden-heading"><h2>lileyzzz</h2></header>
+    <div class="garden-layout">
+      <div class="garden-notes" aria-label="Comforting words">
+        <p class="garden-note note-one">i lawb you zobraaah</p>
+        <p class="garden-note note-two">you look like lilies and tulips, very magandah</p>
+        <p class="garden-note note-three">you are my favourite person, my favourite bestfriend</p>
+        <p class="garden-note note-four">you can handle anything because you've already handled everything</p>
+        <p class="garden-note note-five">fiel, a lovely poem</p>
+      </div>
+      <div class="garden-ground" aria-label="A garden of two lilies and two tulips">
+        <span class="scattered-petal petal-a" aria-hidden="true"></span><span class="scattered-petal petal-b" aria-hidden="true"></span>
+        <span class="scattered-petal petal-c" aria-hidden="true"></span><span class="scattered-petal petal-d" aria-hidden="true"></span>
+        <div class="garden-bed-row">
+          <div class="flower-bed lily-bed" data-flower="lily">
+<svg class="flower-svg" viewBox="0 0 150 250" role="img" aria-label="Pink lily">
+ <defs>
+  <linearGradient id="garden-lily-one-petal" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#fff0ef"/><stop offset=".48" stop-color="#f4cbd2"/><stop offset="1" stop-color="#d98e9f"/>
+  </linearGradient>
+  <linearGradient id="garden-lily-one-leaf" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#bed0ad"/><stop offset="1" stop-color="#678a66"/>
+  </linearGradient>
+ </defs>
+ <path class="flower-stem" d="M75 238 C72 190 81 151 76 107"/>
+ <path class="flower-leaf" d="M76 204 C40 171 18 175 13 191 C34 216 58 220 76 204Z"/>
+ <path class="leaf-vein" d="M22 191 Q48 194 73 205"/>
+ <path class="flower-leaf" d="M77 178 C111 144 136 150 139 167 C116 190 94 192 77 178Z"/>
+ <path class="leaf-vein" d="M132 165 Q103 170 78 180"/>
+ <path class="flower-leaf" d="M75 224 C52 205 43 206 35 215 C48 235 63 239 75 224Z"/>
+ <g class="flower-bloom">
+  <path d="M75 113 C42 83 39 36 68 9 C85 31 91 78 75 113Z" fill="url(#garden-lily-one-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M74 111 C26 109 2 77 20 42 C49 46 72 78 74 111Z" fill="url(#garden-lily-one-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M76 111 C124 109 148 77 130 42 C101 46 78 78 76 111Z" fill="url(#garden-lily-one-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M73 112 C33 133 2 119 4 86 C33 73 61 88 73 112Z" fill="#f7dce0" stroke="#c98194" stroke-width="2"/>
+  <path d="M77 112 C117 133 148 119 146 86 C117 73 89 88 77 112Z" fill="#efbdc8" stroke="#c98194" stroke-width="2"/>
+  <path d="M75 111 C47 138 48 174 75 186 C102 174 103 138 75 111Z" fill="#fbe8e8" stroke="#c98194" stroke-width="2"/>
+  <path d="M75 119 Q72 144 75 170 M71 116 Q55 130 48 144 M79 116 Q95 130 102 144" fill="none" stroke="#d88f9f" stroke-width="1.4" opacity=".8"/>
+  <g stroke="#d4a24d" stroke-width="2" stroke-linecap="round">
+   <path d="M75 129 L75 83 M74 131 L53 94 M76 131 L96 94 M73 132 L35 110 M77 132 L115 110"/>
+  </g>
+  <g fill="#d6a34d">
+   <ellipse cx="75" cy="81" rx="4" ry="2.6"/><ellipse cx="52" cy="92" rx="4" ry="2.6" transform="rotate(35 52 92)"/>
+   <ellipse cx="97" cy="92" rx="4" ry="2.6" transform="rotate(-35 97 92)"/><ellipse cx="34" cy="108" rx="4" ry="2.6" transform="rotate(35 34 108)"/>
+   <ellipse cx="116" cy="108" rx="4" ry="2.6" transform="rotate(-35 116 108)"/>
+  </g>
+ </g>
+</svg><div class="flower-label">lily</div></div>
+          <div class="flower-bed tulip-bed" data-flower="tulip">
+<svg class="flower-svg" viewBox="0 0 150 250" role="img" aria-label="Pink tulip">
+ <defs>
+  <linearGradient id="garden-tulip-one-petal" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#fff0ef"/><stop offset=".5" stop-color="#ecacbb"/><stop offset="1" stop-color="#cb7189"/>
+  </linearGradient>
+  <linearGradient id="garden-tulip-one-leaf" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#c1d0ae"/><stop offset="1" stop-color="#6d8d68"/>
+  </linearGradient>
+ </defs>
+ <path class="flower-stem" d="M75 240 C82 191 72 151 75 114"/>
+ <path class="flower-leaf" d="M77 218 C45 185 20 177 12 193 C35 225 57 235 77 218Z"/>
+ <path class="leaf-vein" d="M18 196 Q48 204 76 220"/>
+ <path class="flower-leaf" d="M76 190 C107 154 131 151 138 169 C120 197 99 209 76 190Z"/>
+ <path class="leaf-vein" d="M132 170 Q105 183 78 192"/>
+ <g class="flower-bloom">
+  <path d="M29 119 C22 77 36 38 58 28 C65 52 67 86 75 119Z" fill="url(#garden-tulip-one-petal)" stroke="#c7778c" stroke-width="2"/>
+  <path d="M53 120 C49 64 60 17 77 8 C91 40 88 88 78 120Z" fill="#f8d9df" stroke="#c7778c" stroke-width="2"/>
+  <path d="M76 120 C83 67 101 26 119 32 C126 70 107 105 76 120Z" fill="url(#garden-tulip-one-petal)" stroke="#c7778c" stroke-width="2"/>
+  <path d="M28 117 Q75 146 122 117 C113 153 94 166 75 163 C54 166 37 151 28 117Z" fill="#f2c2cd" stroke="#c7778c" stroke-width="2"/>
+  <path d="M42 115 Q75 132 108 115" fill="none" stroke="#fff0ef" stroke-width="2" opacity=".8"/>
+  <path d="M75 121 Q74 140 75 155" fill="none" stroke="#d9859a" stroke-width="1.5"/>
+ </g>
+</svg><div class="flower-label">tulip</div></div>
+          <div class="flower-bed lily-bed second-lily" data-flower="lily">
+<svg class="flower-svg" viewBox="0 0 150 250" role="img" aria-label="Pink lily">
+ <defs>
+  <linearGradient id="garden-lily-two-petal" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#fff0ef"/><stop offset=".48" stop-color="#f4cbd2"/><stop offset="1" stop-color="#d98e9f"/>
+  </linearGradient>
+  <linearGradient id="garden-lily-two-leaf" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#bed0ad"/><stop offset="1" stop-color="#678a66"/>
+  </linearGradient>
+ </defs>
+ <path class="flower-stem" d="M75 238 C72 190 81 151 76 107"/>
+ <path class="flower-leaf" d="M76 204 C40 171 18 175 13 191 C34 216 58 220 76 204Z"/>
+ <path class="leaf-vein" d="M22 191 Q48 194 73 205"/>
+ <path class="flower-leaf" d="M77 178 C111 144 136 150 139 167 C116 190 94 192 77 178Z"/>
+ <path class="leaf-vein" d="M132 165 Q103 170 78 180"/>
+ <path class="flower-leaf" d="M75 224 C52 205 43 206 35 215 C48 235 63 239 75 224Z"/>
+ <g class="flower-bloom">
+  <path d="M75 113 C42 83 39 36 68 9 C85 31 91 78 75 113Z" fill="url(#garden-lily-two-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M74 111 C26 109 2 77 20 42 C49 46 72 78 74 111Z" fill="url(#garden-lily-two-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M76 111 C124 109 148 77 130 42 C101 46 78 78 76 111Z" fill="url(#garden-lily-two-petal)" stroke="#c98194" stroke-width="2"/>
+  <path d="M73 112 C33 133 2 119 4 86 C33 73 61 88 73 112Z" fill="#f7dce0" stroke="#c98194" stroke-width="2"/>
+  <path d="M77 112 C117 133 148 119 146 86 C117 73 89 88 77 112Z" fill="#efbdc8" stroke="#c98194" stroke-width="2"/>
+  <path d="M75 111 C47 138 48 174 75 186 C102 174 103 138 75 111Z" fill="#fbe8e8" stroke="#c98194" stroke-width="2"/>
+  <path d="M75 119 Q72 144 75 170 M71 116 Q55 130 48 144 M79 116 Q95 130 102 144" fill="none" stroke="#d88f9f" stroke-width="1.4" opacity=".8"/>
+  <g stroke="#d4a24d" stroke-width="2" stroke-linecap="round">
+   <path d="M75 129 L75 83 M74 131 L53 94 M76 131 L96 94 M73 132 L35 110 M77 132 L115 110"/>
+  </g>
+  <g fill="#d6a34d">
+   <ellipse cx="75" cy="81" rx="4" ry="2.6"/><ellipse cx="52" cy="92" rx="4" ry="2.6" transform="rotate(35 52 92)"/>
+   <ellipse cx="97" cy="92" rx="4" ry="2.6" transform="rotate(-35 97 92)"/><ellipse cx="34" cy="108" rx="4" ry="2.6" transform="rotate(35 34 108)"/>
+   <ellipse cx="116" cy="108" rx="4" ry="2.6" transform="rotate(-35 116 108)"/>
+  </g>
+ </g>
+</svg><div class="flower-label">lily</div></div>
+          <div class="flower-bed tulip-bed second-tulip" data-flower="tulip">
+<svg class="flower-svg" viewBox="0 0 150 250" role="img" aria-label="Pink tulip">
+ <defs>
+  <linearGradient id="garden-tulip-two-petal" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#fff0ef"/><stop offset=".5" stop-color="#ecacbb"/><stop offset="1" stop-color="#cb7189"/>
+  </linearGradient>
+  <linearGradient id="garden-tulip-two-leaf" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#c1d0ae"/><stop offset="1" stop-color="#6d8d68"/>
+  </linearGradient>
+ </defs>
+ <path class="flower-stem" d="M75 240 C82 191 72 151 75 114"/>
+ <path class="flower-leaf" d="M77 218 C45 185 20 177 12 193 C35 225 57 235 77 218Z"/>
+ <path class="leaf-vein" d="M18 196 Q48 204 76 220"/>
+ <path class="flower-leaf" d="M76 190 C107 154 131 151 138 169 C120 197 99 209 76 190Z"/>
+ <path class="leaf-vein" d="M132 170 Q105 183 78 192"/>
+ <g class="flower-bloom">
+  <path d="M29 119 C22 77 36 38 58 28 C65 52 67 86 75 119Z" fill="url(#garden-tulip-two-petal)" stroke="#c7778c" stroke-width="2"/>
+  <path d="M53 120 C49 64 60 17 77 8 C91 40 88 88 78 120Z" fill="#f8d9df" stroke="#c7778c" stroke-width="2"/>
+  <path d="M76 120 C83 67 101 26 119 32 C126 70 107 105 76 120Z" fill="url(#garden-tulip-two-petal)" stroke="#c7778c" stroke-width="2"/>
+  <path d="M28 117 Q75 146 122 117 C113 153 94 166 75 163 C54 166 37 151 28 117Z" fill="#f2c2cd" stroke="#c7778c" stroke-width="2"/>
+  <path d="M42 115 Q75 132 108 115" fill="none" stroke="#fff0ef" stroke-width="2" opacity=".8"/>
+  <path d="M75 121 Q74 140 75 155" fill="none" stroke="#d9859a" stroke-width="1.5"/>
+ </g>
+</svg><div class="flower-label">tulip</div></div>
+        </div>
+        <div class="garden-grass grass-left" aria-hidden="true"></div><div class="garden-grass grass-right" aria-hidden="true"></div>
+        <div class="butterfly butterfly-one" id="butterflyA" aria-hidden="true"></div>
+        <div class="butterfly butterfly-two" id="butterflyB" aria-hidden="true"></div>
+      </div>
+    </div>
+    <button class="btn primary water-btn" id="waterBtn">Water the flowers</button>
+    <div class="water-count" id="waterCount" aria-live="polite">0 / 4</div>
+  </div>
+</section><section class="section" id="together">
+  <div class="section-inner">
+    <header class="section-head final-heading"><h2>love ka naman namin ni snoopey</h2></header>
+    <div class="final-stage">
+      <div class="final-garden-glow" aria-hidden="true"></div>
+      <div class="final-garden-floor" aria-hidden="true"></div>
+      <div class="final-garden-flowers" aria-hidden="true">
+        <svg viewBox="0 0 900 180" preserveAspectRatio="none">
+          <g fill="none" stroke="#72906a" stroke-width="4" stroke-linecap="round">
+            <path d="M75 180 Q70 130 85 93 M185 180 Q182 138 175 100 M315 180 Q307 126 328 78 M458 180 Q452 132 460 92 M600 180 Q604 133 590 89 M736 180 Q730 132 750 75 M830 180 Q836 140 818 105"/>
+          </g>
+          <g fill="#9eb892" stroke="#6f8d68" stroke-width="2">
+            <path d="M82 144 Q35 105 19 137 Q45 168 82 144Z"/><path d="M178 152 Q215 109 242 130 Q219 162 178 152Z"/>
+            <path d="M316 145 Q273 104 251 132 Q279 164 316 145Z"/><path d="M460 145 Q504 101 530 127 Q504 163 460 145Z"/>
+            <path d="M592 149 Q552 110 535 137 Q558 166 592 149Z"/><path d="M747 137 Q786 94 810 120 Q786 155 747 137Z"/>
+            <path d="M820 155 Q780 126 764 147 Q787 171 820 155Z"/>
+          </g>
+          <g fill="#f3cbd2" stroke="#cb8b9a" stroke-width="2">
+            <path d="M85 101 C53 75 58 35 84 16 C108 39 111 75 85 101Z"/><path d="M85 100 C45 100 26 73 42 47 C65 49 82 74 85 100Z"/><path d="M86 100 C125 100 144 73 128 47 C105 49 88 74 86 100Z"/>
+            <path d="M328 83 C300 59 305 25 328 7 C351 28 355 59 328 83Z"/><path d="M328 83 C294 83 278 61 292 39 C312 42 325 63 328 83Z"/><path d="M329 83 C362 83 378 61 364 39 C344 42 331 63 329 83Z"/>
+            <path d="M590 94 C562 68 566 31 590 13 C614 35 618 68 590 94Z"/><path d="M590 94 C554 92 540 67 554 44 C574 47 588 70 590 94Z"/><path d="M591 94 C627 92 641 67 627 44 C607 47 593 70 591 94Z"/>
+          </g>
+          <g fill="#e7a7b6" stroke="#c77c8d" stroke-width="2">
+            <path d="M175 109 Q144 60 164 31 Q188 40 189 95Z"/><path d="M176 109 Q202 58 224 40 Q239 70 176 109Z"/><path d="M175 109 Q202 124 222 101 Q207 139 175 109Z"/>
+            <path d="M460 101 Q433 52 452 24 Q476 32 474 92Z"/><path d="M460 101 Q486 54 508 39 Q519 68 460 101Z"/><path d="M460 101 Q487 117 507 96 Q492 132 460 101Z"/>
+            <path d="M750 86 Q723 40 742 13 Q766 23 764 79Z"/><path d="M750 86 Q777 38 798 28 Q808 58 750 86Z"/><path d="M750 86 Q776 102 796 82 Q781 118 750 86Z"/>
+          </g>
+        </svg>
+      </div>
+      <!-- Keep these image positions empty so you can add your own pictures. -->
+      <div class="art-slot peanuts-slot" aria-label="Your Peanuts friends picture"></div>
+      <div class="art-slot avatar-slot" aria-label="Your own picture"></div>
+      <div class="art-slot woodstock-slot" aria-label="Your Woodstock picture"></div>
+    </div>
+  </div>
+</section><script>
 const selectOne = (selector) => document.querySelector(selector);
 const selectAll = (selector) => [...document.querySelectorAll(selector)];
 const scrollToElement = (element, block = "start") => {
   if (element) element.scrollIntoView({ behavior: "smooth", block });
 };
 
-selectOne("#enterBtn")?.addEventListener("click", () => scrollToElement(selectOne("#room")));
-selectOne("#gardenJump")?.addEventListener("click", () => scrollToElement(selectOne("#garden")));
-selectOne("#roomMusicBtn")?.addEventListener("click", () => {
-  const music = selectOne("#music");
-  scrollToElement(music, "center");
-  music?.classList.remove("is-focused");
-  requestAnimationFrame(() => music?.classList.add("is-focused"));
-});
+selectOne("#enterBtn")?.addEventListener("click", () => scrollToElement(selectOne("#letters")));
 
-const roomScene = selectOne(".room-scene");
-const lampButton = selectOne("#lampBtn");
-lampButton?.setAttribute("aria-pressed", "false");
-lampButton?.addEventListener("click", () => {
-  const isLit = roomScene?.classList.toggle("is-lit") ?? false;
-  lampButton.setAttribute("aria-pressed", String(isLit));
-  lampButton.textContent = isLit ? "Turn the lamp off" : "Turn the lamp on";
-});
+const reminders = [
+  "Even when the world feels wide,\nAnd you feel left out of the tide,\nI hope you'll always come to see,\nThere's a place where you're welcome to be.",
+  "You need not smile through every day,\nOr hide the things you cannot say.\nYou deserve kindness, soft and true,\nOn cloudy days and sunny ones too.",
+  "May gentle days find their way to you,\nMay hope stay near in all you do.\nAnd when the world feels cold or new,\nMay you remember: you matter too.",
+  "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+  "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.",
+  "The LORD hath appeared of old unto me, saying, Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee."
+];
 
 const modal = selectOne("#letterModal");
-const modalTitle = selectOne("#letterTitle");
 const modalBody = selectOne("#letterBody");
 const closeButton = selectOne("#closeModal");
 let activeEnvelope = null;
@@ -474,12 +685,11 @@ const closeLetter = () => {
 selectAll(".envelope").forEach((envelope) => {
   envelope.addEventListener("click", () => {
     const index = Number(envelope.dataset.letter);
-    if (!Number.isInteger(index) || index < 0 || index > 2 || !modal) return;
+    if (!Number.isInteger(index) || index < 0 || index >= reminders.length || !modal) return;
     activeEnvelope?.classList.remove("is-open");
     activeEnvelope = envelope;
     envelope.classList.add("is-open");
-    modalTitle.textContent = "";
-    modalBody.textContent = "";
+    modalBody.textContent = reminders[index];
     modal.setAttribute("aria-hidden", "false");
     modal.classList.add("show");
     document.body.classList.add("modal-open");
@@ -494,41 +704,32 @@ modal?.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLetter();
   if (event.key !== "Tab" || !modal?.classList.contains("show")) return;
-  const focusable = [...modal.querySelectorAll("button,[href],[tabindex]:not([tabindex='-1'])")]
-    .filter((element) => !element.disabled);
+  const focusable = [...modal.querySelectorAll("button,[href],[tabindex]:not([tabindex='-1'])")].filter((element) => !element.disabled);
   if (!focusable.length) return;
   const first = focusable[0], last = focusable[focusable.length - 1];
-  if (event.shiftKey && document.activeElement === first) {
-    event.preventDefault(); last.focus();
-  } else if (!event.shiftKey && document.activeElement === last) {
-    event.preventDefault(); first.focus();
-  }
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
 });
 
 let waterCount = 0;
 const flowerBeds = selectAll(".flower-bed");
 const waterButton = selectOne("#waterBtn");
 const counter = selectOne("#waterCount");
-waterButton?.setAttribute("aria-label", "Water the flowers");
-counter?.setAttribute("aria-live", "polite");
 
 waterButton?.addEventListener("click", () => {
   if (waterCount >= flowerBeds.length) return;
   const flower = flowerBeds[waterCount];
   flower.classList.add("bloomed");
-  flower.setAttribute("aria-label", flower.dataset.flower + " bloomed");
+  flower.setAttribute("aria-label", (flower.dataset.flower || "flower") + " bloomed");
   waterCount += 1;
   if (counter) counter.textContent = waterCount + " / " + flowerBeds.length;
-  if (waterCount === 2) selectOne("#butterflyA")?.classList.add("show");
-  if (waterCount === 3) selectOne("#butterflyB")?.classList.add("show");
-  if (waterCount === flowerBeds.length) {
-    if (waterButton) {
-      waterButton.disabled = true;
-      waterButton.setAttribute("aria-label", "The garden is blooming");
-    }
+  if (waterCount >= 2) selectOne("#butterflyA")?.classList.add("show");
+  if (waterCount >= 3) selectOne("#butterflyB")?.classList.add("show");
+  if (waterCount === flowerBeds.length && waterButton) {
+    waterButton.disabled = true;
+    waterButton.textContent = "The garden is blooming";
   }
 });
-
 </script>
-</body>
+</body></body>
 </html>
