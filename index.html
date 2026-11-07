@@ -302,10 +302,102 @@ button{-webkit-tap-highlight-color:transparent}
 }
 @media(prefers-reduced-motion:reduce){.flower-bloom,.butterfly,.woodstock-slot{transition:none!important;animation:none!important}}
 
+
+/* Rebuilt as separate screens, not a scrolling document */
+html{scroll-behavior:auto}
+body{font-family:Arial,Helvetica,sans-serif;overflow:hidden;background:#f8eee8}
+body,button,input{font-family:Arial,Helvetica,sans-serif}
+.serif,.section-head h2,.welcome-card h1,.welcome-message,.letter-card p,.player-track-name,.garden-note,.env-label{font-family:Arial,Helvetica,sans-serif!important;font-style:normal!important}
+.page-section{display:none!important;position:fixed;inset:0;width:100%;height:100svh;min-height:100svh;overflow:auto;overscroll-behavior:contain;padding:clamp(22px,4vh,48px) clamp(16px,5vw,64px) 100px!important}
+.page-section.active{display:flex!important;flex-direction:column;justify-content:center;align-items:center}
+.page-section>.section-inner{width:min(100%,1100px);margin:auto}
+#welcome.page-section{display:none!important;place-items:center;padding:24px 16px 92px!important}
+#welcome.page-section.active{display:grid!important}
+.page-controls{position:fixed;z-index:15;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:14px max(18px,calc((100vw - 1050px)/2));background:linear-gradient(180deg,rgba(255,250,246,0),rgba(255,250,246,.94) 35%);pointer-events:none}
+.page-btn{pointer-events:auto;min-width:104px;border:1px solid #c99ca0;border-radius:999px;padding:11px 20px;background:#fffaf6;color:#76565c;font-size:.9rem;font-weight:600;box-shadow:0 4px 16px rgba(115,76,78,.1);cursor:pointer}
+.page-btn:hover{background:#f3dfe0}
+.page-next{background:#785b60;color:#fffaf6;border-color:#785b60}
+.page-next:hover{background:#63494e}
+#welcome .page-controls{padding-bottom:18px}
+.welcome-card{padding:28px 24px 32px;width:min(100%,560px);background:rgba(255,250,246,.94);border-color:#e2c8c5}
+.welcome-art-fixed{width:min(100%,340px);height:clamp(170px,28vh,230px);margin:0 auto 14px;overflow:visible}
+.welcome-art-fixed .welcome-bouquet{width:100%;height:100%;overflow:visible}
+.welcome-card h1{font-size:clamp(2.2rem,7vw,3.6rem);font-weight:600}
+.welcome-message{font-size:1rem;font-weight:400;line-height:1.6}
+#music.page-section{background:radial-gradient(ellipse at center,#fffaf4 0%,#f7e5df 62%,#efdbd6 100%)}
+#music .section-head{margin:0 0 10px}
+#music .section-head h2{font-size:clamp(2rem,5vw,3rem);font-weight:600;color:#76565c}
+#music .music-inner{min-height:0;gap:18px}
+#music .vintage-player{width:min(100%,540px);background:linear-gradient(145deg,#f4e0cf,#e7c6ae 52%,#d9b49c);border-color:#b9937c}
+#music .music-floral{width:clamp(130px,19vw,210px);opacity:.92}
+#letters.page-section{background:radial-gradient(ellipse at center,#fffaf4 0%,#f8e8e4 72%,#f1dcd9 100%)}
+#letters .section-head{margin:0 auto 30px}
+#letters .section-head h2{font-size:clamp(2rem,5vw,3rem);font-weight:600;color:#76565c}
+#letters .envelopes{max-width:780px;gap:22px}
+#letters .envelope{height:clamp(140px,21vh,180px);max-width:220px}
+#letters .env-paper{background:linear-gradient(145deg,#fff9f1,#f0d6d0);border:1px solid #d9b6b0;box-shadow:0 12px 25px rgba(126,82,77,.13)}
+#letters .env-paper:before{background:linear-gradient(140deg,transparent 49.5%,#e7c5bf 50%),linear-gradient(220deg,transparent 49.5%,#f1d8d1 50%)}
+#letters .env-flap{background:linear-gradient(150deg,#fffaf3,#f2deda);border-bottom:1px solid #e1c0bb}
+#letters .env-lily{width:45px;height:45px;top:50%;left:50%;background:#fff8f1;border-radius:50%;padding:3px;box-shadow:0 3px 10px rgba(123,79,80,.13)}
+#letters .letter-florals{opacity:.7}
+#garden.page-section{background:radial-gradient(ellipse at 50% 10%,#fffaf4 0%,#f4eee4 52%,#e5eadc 100%)}
+#garden .garden-page-inner{max-width:1100px}
+#garden .garden-heading{margin:0 0 4px}
+#garden .garden-heading h2{font-size:clamp(2rem,5vw,3rem);font-weight:600;color:#76565c}
+#garden .garden-layout{width:min(100%,1000px);min-height:min(66vh,600px);margin:0 auto}
+#garden .garden-ground{position:absolute;inset:8% 8% 4%;margin:0;min-height:0;border-radius:48% 48% 24px 24px/18% 18% 24px 24px;background:radial-gradient(ellipse at 50% 35%,#f1f2e5 0%,#dce8d2 48%,#a9c09d 100%);border:1px solid rgba(113,143,103,.35);box-shadow:inset 0 0 50px rgba(255,255,255,.52),0 15px 40px rgba(83,113,77,.13)}
+#garden .garden-ground:before{height:25%;background:linear-gradient(180deg,rgba(140,169,123,.08),rgba(92,131,84,.3))}
+#garden .garden-bed-row{position:absolute;inset:10% 4% 0;min-height:0;padding:0 3% 4%;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end}
+#garden .flower-bed{height:100%;max-height:390px;width:min(100%,170px)}
+#garden .flower-svg{height:auto;max-height:100%;width:100%}
+#garden .garden-notes{position:absolute;inset:0;z-index:5;pointer-events:none}
+#garden .garden-note{position:absolute;max-width:250px;width:max-content;color:#78545e;font:600 clamp(.86rem,1.55vw,1.12rem)/1.35 Arial,Helvetica,sans-serif!important;letter-spacing:.005em;text-shadow:0 1px 0 #fffaf4,0 0 7px rgba(255,250,244,.9);background:rgba(255,250,244,.22);padding:4px 7px;border-radius:5px}
+#garden .note-one{top:8%;left:4%;transform:rotate(-8deg)}
+#garden .note-two{top:10%;right:3%;text-align:right;transform:rotate(6deg)}
+#garden .note-three{top:48%;left:0;max-width:190px;transform:rotate(-5deg)}
+#garden .note-four{top:48%;right:0;max-width:215px;text-align:right;transform:rotate(5deg)}
+#garden .note-five{bottom:0;left:39%;transform:rotate(-4deg)}
+#garden .water-btn{margin-top:18px}
+#garden .water-count{margin-top:6px}
+#together.page-section{background:radial-gradient(ellipse at 50% 10%,#fffaf4 0%,#f7e9e3 60%,#e8ebdf 100%)}
+#together .final-heading h2{font:600 clamp(1.8rem,5vw,3.1rem)/1.2 Arial,Helvetica,sans-serif!important}
+#together .final-stage{min-height:min(58vh,500px)}
+@media(max-width:700px){
+ .page-section{padding:22px 14px 88px!important}
+ #welcome.page-section{padding:18px 14px 86px!important}
+ .welcome-card{padding:22px 18px 26px}
+ .welcome-art-fixed{height:clamp(155px,25vh,205px);width:min(100%,300px)}
+ #music .music-floral-left{left:-18px;bottom:1%;width:118px;opacity:.75}
+ #music .music-floral-right{right:-18px;top:1%;width:118px;opacity:.75}
+ #music .vintage-player{width:min(100%,470px);padding:15px 12px}
+ #letters .envelopes{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px}
+ #letters .envelope{height:clamp(125px,18vh,155px)}
+ #garden .garden-layout{min-height:58vh}
+ #garden .garden-ground{inset:13% 1% 5%;border-radius:32% 32% 16px 16px/12% 12% 16px 16px}
+ #garden .garden-bed-row{inset:20% 2% 0;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:0 4px}
+ #garden .flower-bed{height:100%;max-height:220px;width:min(100%,125px)}
+ #garden .flower-svg{height:100%;width:100%}
+ #garden .garden-note{font-size:clamp(.72rem,2.6vw,.9rem);max-width:42%;line-height:1.3;padding:3px 4px}
+ #garden .note-one{top:1%;left:0}
+ #garden .note-two{top:1%;right:0}
+ #garden .note-three{top:45%;left:0;max-width:36%}
+ #garden .note-four{top:45%;right:0;max-width:38%}
+ #garden .note-five{bottom:0;left:37%;max-width:62%}
+ #garden .water-btn{margin-top:8px}
+ #together .final-stage{min-height:45vh;padding:42px 3% 32px}
+ .page-btn{min-width:94px;padding:10px 17px}
+}
+@media(max-width:390px){
+ #garden .garden-layout{min-height:55vh}
+ #garden .garden-note{font-size:.69rem}
+ #garden .garden-ground{inset:15% 0 6%}
+ #garden .flower-bed{max-height:190px;max-width:112px}
+}
+
 </style>
 </head>
 <body>
-<section id="welcome">
+<section id="welcome" class="page-section" data-page-name="welcome">
 <div class="floral-wrap" aria-hidden="true">
 <svg class="floral-sprig floral-sprig-a" viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg">
  <path d="M126 292 C113 244 122 192 128 125 M124 250 C88 213 61 206 35 218 M124 225 C160 193 184 184 211 188 M127 178 C94 149 79 139 63 111" fill="none" stroke="#829d78" stroke-width="4" stroke-linecap="round"/>
@@ -347,7 +439,7 @@ button{-webkit-tap-highlight-color:transparent}
 </svg>
 </div>
  <div class="welcome-card">
-    <div class="welcome-art" aria-hidden="true">
+    <div class="welcome-art welcome-art-fixed" aria-hidden="true">
       <div class="welcome-sun"></div>
       <svg class="welcome-bouquet" viewBox="0 0 220 150" role="presentation" aria-hidden="true">
         <path d="M110 145 C104 112 91 82 64 45 M110 145 C111 105 131 77 157 39 M110 145 C111 102 109 70 110 24" fill="none" stroke="#78936f" stroke-width="3" stroke-linecap="round"/>
@@ -374,28 +466,11 @@ button{-webkit-tap-highlight-color:transparent}
     <p class="welcome-message">wag mow panzinin yon, andito naman akohw</p>
     <button class="btn primary" id="enterBtn">Open</button>
   </div>
-</section>
-
-<section class="section" id="letters">
-  <div class="letter-florals" aria-hidden="true">
-    <span class="letter-sprig letter-sprig-left"></span>
-    <span class="letter-sprig letter-sprig-right"></span>
-  </div>
-  <div class="section-inner">
-    <header class="section-head"><h2>reminder :P</h2></header>
-    <div class="envelopes">
-      <button class="envelope" data-letter="0" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><svg class="env-lily" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 42 C15 28 17 13 30 5 C43 13 45 28 30 42Z" fill="#f1bcc8" stroke="#bd8291" stroke-width="1.6"/><path d="M29 41 C10 38 6 24 15 15 C25 19 30 30 29 41Z M31 41 C50 38 54 24 45 15 C35 19 30 30 31 41Z" fill="#f8dfe1" stroke="#bd8291" stroke-width="1.6"/><path d="M30 40 C20 48 22 56 30 58 C38 56 40 48 30 40Z" fill="#efc6ce" stroke="#bd8291" stroke-width="1.4"/><path d="M30 42 L30 23 M28 41 L21 29 M32 41 L39 29" stroke="#c7964e" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-      <button class="envelope" data-letter="1" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
-      <button class="envelope" data-letter="2" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
-      <button class="envelope" data-letter="3" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
-      <button class="envelope" data-letter="4" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
-      <button class="envelope" data-letter="5" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><span class="env-lily">✿</span></button>
-    </div>
-  </div>
-</section>
-<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Reminder">
-  <div class="letter-card"><button class="close-modal" id="closeModal" aria-label="Close">×</button><h3 id="letterTitle"></h3><p id="letterBody" aria-live="polite"></p></div>
-</div><section class="section" id="music">
+<nav class="page-controls" aria-label="Page navigation">
+  <span></span>
+  <button class="page-btn page-next" type="button" data-page="music">Next</button>
+</nav></section>
+<section class="section" id="music" class="page-section">
   <div class="music-floral music-floral-left" aria-hidden="true">
     
 <svg class="flower-svg" viewBox="0 0 150 250" role="img" aria-label="Pink lily">
@@ -458,7 +533,7 @@ button{-webkit-tap-highlight-color:transparent}
  </g>
 </svg>
   </div>
-  <div class="section-inner music-inner">
+  <div class="section-inner music-inner"><header class="section-head"><h2>kanta kow</h2></header>
     <div class="vintage-player" aria-label="Vintage music player">
       <div class="player-topline" aria-hidden="true"><span class="player-dot"></span><span class="player-dot"></span></div>
       <div class="player-display">
@@ -473,12 +548,34 @@ button{-webkit-tap-highlight-color:transparent}
       </div>
     </div>
   </div>
-</section>
-
-<section class="section" id="garden">
+<nav class="page-controls" aria-label="Page navigation">
+  <button class="page-btn page-back" type="button" data-page="welcome">Back</button>
+  <button class="page-btn page-next" type="button" data-page="letters">Next</button>
+</nav></section>
+<section class="section" id="letters" class="page-section">
+  <div class="letter-florals" aria-hidden="true">
+    <span class="letter-sprig letter-sprig-left"></span>
+    <span class="letter-sprig letter-sprig-right"></span>
+  </div>
   <div class="section-inner">
+    <header class="section-head"><h2>reminder :P</h2></header>
+    <div class="envelopes">
+      <button class="envelope" data-letter="0" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><svg class="env-lily" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 42 C15 28 17 13 30 5 C43 13 45 28 30 42Z" fill="#f1bcc8" stroke="#bd8291" stroke-width="1.6"/><path d="M29 41 C10 38 6 24 15 15 C25 19 30 30 29 41Z M31 41 C50 38 54 24 45 15 C35 19 30 30 31 41Z" fill="#f8dfe1" stroke="#bd8291" stroke-width="1.6"/><path d="M30 40 C20 48 22 56 30 58 C38 56 40 48 30 40Z" fill="#efc6ce" stroke="#bd8291" stroke-width="1.4"/><path d="M30 42 L30 23 M28 41 L21 29 M32 41 L39 29" stroke="#c7964e" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+      <button class="envelope" data-letter="1" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><svg class="env-lily" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 42 C15 28 17 13 30 5 C43 13 45 28 30 42Z" fill="#f1bcc8" stroke="#bd8291" stroke-width="1.6"/><path d="M29 41 C10 38 6 24 15 15 C25 19 30 30 29 41Z M31 41 C50 38 54 24 45 15 C35 19 30 30 31 41Z" fill="#f8dfe1" stroke="#bd8291" stroke-width="1.6"/><path d="M30 40 C20 48 22 56 30 58 C38 56 40 48 30 40Z" fill="#efc6ce" stroke="#bd8291" stroke-width="1.4"/><path d="M30 42 L30 23 M28 41 L21 29 M32 41 L39 29" stroke="#c7964e" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+      <button class="envelope" data-letter="2" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><svg class="env-lily" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 42 C15 28 17 13 30 5 C43 13 45 28 30 42Z" fill="#f1bcc8" stroke="#bd8291" stroke-width="1.6"/><path d="M29 41 C10 38 6 24 15 15 C25 19 30 30 29 41Z M31 41 C50 38 54 24 45 15 C35 19 30 30 31 41Z" fill="#f8dfe1" stroke="#bd8291" stroke-width="1.6"/><path d="M30 40 C20 48 22 56 30 58 C38 56 40 48 30 40Z" fill="#efc6ce" stroke="#bd8291" stroke-width="1.4"/><path d="M30 42 L30 23 M28 41 L21 29 M32 41 L39 29" stroke="#c7964e" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+      <button class="envelope" data-letter="3" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><svg class="env-lily" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 42 C15 28 17 13 30 5 C43 13 45 28 30 42Z" fill="#f1bcc8" stroke="#bd8291" stroke-width="1.6"/><path d="M29 41 C10 38 6 24 15 15 C25 19 30 30 29 41Z M31 41 C50 38 54 24 45 15 C35 19 30 30 31 41Z" fill="#f8dfe1" stroke="#bd8291" stroke-width="1.6"/><path d="M30 40 C20 48 22 56 30 58 C38 56 40 48 30 40Z" fill="#efc6ce" stroke="#bd8291" stroke-width="1.4"/><path d="M30 42 L30 23 M28 41 L21 29 M32 41 L39 29" stroke="#c7964e" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+      <button class="envelope" data-letter="4" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><svg class="env-lily" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 42 C15 28 17 13 30 5 C43 13 45 28 30 42Z" fill="#f1bcc8" stroke="#bd8291" stroke-width="1.6"/><path d="M29 41 C10 38 6 24 15 15 C25 19 30 30 29 41Z M31 41 C50 38 54 24 45 15 C35 19 30 30 31 41Z" fill="#f8dfe1" stroke="#bd8291" stroke-width="1.6"/><path d="M30 40 C20 48 22 56 30 58 C38 56 40 48 30 40Z" fill="#efc6ce" stroke="#bd8291" stroke-width="1.4"/><path d="M30 42 L30 23 M28 41 L21 29 M32 41 L39 29" stroke="#c7964e" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+      <button class="envelope" data-letter="5" aria-label="Open envelope"><span class="env-paper"></span><span class="env-flap"></span><svg class="env-lily" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 42 C15 28 17 13 30 5 C43 13 45 28 30 42Z" fill="#f1bcc8" stroke="#bd8291" stroke-width="1.6"/><path d="M29 41 C10 38 6 24 15 15 C25 19 30 30 29 41Z M31 41 C50 38 54 24 45 15 C35 19 30 30 31 41Z" fill="#f8dfe1" stroke="#bd8291" stroke-width="1.6"/><path d="M30 40 C20 48 22 56 30 58 C38 56 40 48 30 40Z" fill="#efc6ce" stroke="#bd8291" stroke-width="1.4"/><path d="M30 42 L30 23 M28 41 L21 29 M32 41 L39 29" stroke="#c7964e" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+<nav class="page-controls" aria-label="Page navigation">
+  <button class="page-btn page-back" type="button" data-page="music">Back</button>
+  <button class="page-btn page-next" type="button" data-page="garden">Next</button>
+</nav></section>
+<section class="section" id="garden" class="page-section">
+  <div class="section-inner garden-page-inner">
     <header class="section-head garden-heading"><h2>lileyzzz</h2></header>
-    <div class="garden-layout">
+    <div class="garden-layout garden-scatter-layout">
       <div class="garden-notes" aria-label="Comforting words">
         <p class="garden-note note-one">i lawb you zobraaah</p>
         <p class="garden-note note-two">you look like lilies and tulips, very magandah</p>
@@ -615,7 +712,11 @@ button{-webkit-tap-highlight-color:transparent}
     <button class="btn primary water-btn" id="waterBtn">Water the flowers</button>
     <div class="water-count" id="waterCount" aria-live="polite">0 / 4</div>
   </div>
-</section><section class="section" id="together">
+<nav class="page-controls" aria-label="Page navigation">
+  <button class="page-btn page-back" type="button" data-page="letters">Back</button>
+  <button class="page-btn page-next" type="button" data-page="together">Next</button>
+</nav></section>
+<section class="section" id="together" class="page-section">
   <div class="section-inner">
     <header class="section-head final-heading"><h2>love ka naman namin ni snoopey</h2></header>
     <div class="final-stage">
@@ -650,14 +751,41 @@ button{-webkit-tap-highlight-color:transparent}
       <div class="art-slot woodstock-slot" aria-label="Your Woodstock picture"></div>
     </div>
   </div>
-</section><script>
+<nav class="page-controls" aria-label="Page navigation">
+  <button class="page-btn page-back" type="button" data-page="garden">Back</button>
+  <span></span>
+</nav></section>
+<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Reminder">
+  <div class="letter-card"><button class="close-modal" id="closeModal" aria-label="Close">×</button><h3 id="letterTitle"></h3><p id="letterBody" aria-live="polite"></p></div>
+</div>
+<script>
 const selectOne = (selector) => document.querySelector(selector);
 const selectAll = (selector) => [...document.querySelectorAll(selector)];
-const scrollToElement = (element, block = "start") => {
-  if (element) element.scrollIntoView({ behavior: "smooth", block });
-};
 
-selectOne("#enterBtn")?.addEventListener("click", () => scrollToElement(selectOne("#letters")));
+const pageIds = ["welcome","music","letters","garden","together"];
+const showPage = (id, updateHistory = true) => {
+  if (!pageIds.includes(id)) return;
+  selectAll(".page-section").forEach((page) => {
+    const active = page.id === id;
+    page.classList.toggle("active", active);
+    page.setAttribute("aria-hidden", active ? "false" : "true");
+  });
+  document.body.dataset.currentPage = id;
+  if (updateHistory) history.replaceState({page:id}, "", "#"+id);
+  window.scrollTo({top:0,behavior:"instant"});
+  const heading = document.querySelector("#"+id+" h1, #"+id+" h2");
+  if (heading) heading.setAttribute("tabindex","-1");
+};
+selectAll("[data-page]").forEach((button) => {
+  button.addEventListener("click", () => showPage(button.dataset.page));
+});
+selectOne("#enterBtn")?.addEventListener("click", () => showPage("music"));
+const initialPage = pageIds.includes(location.hash.slice(1)) ? location.hash.slice(1) : "welcome";
+showPage(initialPage,false);
+window.addEventListener("hashchange", () => {
+  const id=location.hash.slice(1);
+  if(pageIds.includes(id)) showPage(id,false);
+});
 
 const reminders = [
   "Even when the world feels wide,\nAnd you feel left out of the tide,\nI hope you'll always come to see,\nThere's a place where you're welcome to be.",
@@ -667,68 +795,61 @@ const reminders = [
   "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.",
   "The LORD hath appeared of old unto me, saying, Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee."
 ];
-
 const modal = selectOne("#letterModal");
 const modalBody = selectOne("#letterBody");
 const closeButton = selectOne("#closeModal");
 let activeEnvelope = null;
-
 const closeLetter = () => {
   if (!modal?.classList.contains("show")) return;
   modal.classList.remove("show");
-  modal.setAttribute("aria-hidden", "true");
+  modal.setAttribute("aria-hidden","true");
   document.body.classList.remove("modal-open");
   activeEnvelope?.classList.remove("is-open");
   activeEnvelope?.focus();
   activeEnvelope = null;
 };
-
 selectAll(".envelope").forEach((envelope) => {
   envelope.addEventListener("click", () => {
-    const index = Number(envelope.dataset.letter);
-    if (!Number.isInteger(index) || index < 0 || index >= reminders.length || !modal) return;
+    const index=Number(envelope.dataset.letter);
+    if (!Number.isInteger(index)||index<0||index>=reminders.length||!modal) return;
     activeEnvelope?.classList.remove("is-open");
-    activeEnvelope = envelope;
+    activeEnvelope=envelope;
     envelope.classList.add("is-open");
-    modalBody.textContent = reminders[index];
-    modal.setAttribute("aria-hidden", "false");
+    modalBody.textContent=reminders[index];
+    modal.setAttribute("aria-hidden","false");
     modal.classList.add("show");
     document.body.classList.add("modal-open");
     closeButton?.focus();
   });
 });
-
-closeButton?.addEventListener("click", closeLetter);
-modal?.addEventListener("click", (event) => {
-  if (event.target === modal) closeLetter();
-});
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeLetter();
-  if (event.key !== "Tab" || !modal?.classList.contains("show")) return;
-  const focusable = [...modal.querySelectorAll("button,[href],[tabindex]:not([tabindex='-1'])")].filter((element) => !element.disabled);
-  if (!focusable.length) return;
-  const first = focusable[0], last = focusable[focusable.length - 1];
-  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+closeButton?.addEventListener("click",closeLetter);
+modal?.addEventListener("click",(event)=>{if(event.target===modal)closeLetter();});
+document.addEventListener("keydown",(event)=>{
+  if(event.key==="Escape")closeLetter();
+  if(event.key!=="Tab"||!modal?.classList.contains("show"))return;
+  const focusable=[...modal.querySelectorAll("button,[href],[tabindex]:not([tabindex='-1'])")].filter((el)=>!el.disabled);
+  if(!focusable.length)return;
+  const first=focusable[0],last=focusable[focusable.length-1];
+  if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+  else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
 });
 
-let waterCount = 0;
-const flowerBeds = selectAll(".flower-bed");
-const waterButton = selectOne("#waterBtn");
-const counter = selectOne("#waterCount");
-
-waterButton?.addEventListener("click", () => {
-  if (waterCount >= flowerBeds.length) return;
-  const flower = flowerBeds[waterCount];
+let waterCount=0;
+const flowerBeds=selectAll(".flower-bed");
+const waterButton=selectOne("#waterBtn");
+const counter=selectOne("#waterCount");
+waterButton?.addEventListener("click",()=>{
+  if(waterCount>=flowerBeds.length)return;
+  const flower=flowerBeds[waterCount];
   flower.classList.add("bloomed");
-  flower.setAttribute("aria-label", (flower.dataset.flower || "flower") + " bloomed");
-  waterCount += 1;
-  if (counter) counter.textContent = waterCount + " / " + flowerBeds.length;
-  if (waterCount >= 2) selectOne("#butterflyA")?.classList.add("show");
-  if (waterCount >= 3) selectOne("#butterflyB")?.classList.add("show");
-  if (waterCount === flowerBeds.length && waterButton) {
-    waterButton.disabled = true;
-    waterButton.setAttribute("aria-label", "All four flowers are blooming");
+  flower.setAttribute("aria-label",(flower.dataset.flower||"flower")+" bloomed");
+  waterCount+=1;
+  if(counter)counter.textContent=waterCount+" / "+flowerBeds.length;
+  if(waterCount>=2)selectOne("#butterflyA")?.classList.add("show");
+  if(waterCount>=3)selectOne("#butterflyB")?.classList.add("show");
+  if(waterCount===flowerBeds.length&&waterButton){
+    waterButton.disabled=true;
+    waterButton.setAttribute("aria-label","All four flowers are blooming");
   }
 });
 </script>
