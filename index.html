@@ -841,6 +841,30 @@ body{overflow:hidden;font-family:'DM Sans',sans-serif}
   #garden .flower-svg{height:158px!important}
 }
 
+
+/* Responsive placement for the uploaded final-scene artwork */
+#together .final-stage{grid-template-columns:minmax(0,1.65fr) minmax(0,.92fr);align-items:end}
+#together .peanuts-slot{grid-column:1;grid-row:1;width:100%;height:clamp(190px,31vw,330px);min-height:0}
+#together .avatar-slot{grid-column:2;grid-row:1;width:100%;height:clamp(210px,34vw,350px);min-height:0}
+#together .art-slot img{object-fit:contain;object-position:center bottom}
+#together .peanuts-slot img{width:100%;height:100%}
+#together .avatar-slot img{width:100%;height:100%}
+#together .woodstock-slot{position:absolute;z-index:5;left:57%;right:auto;top:7%;width:clamp(48px,7vw,78px);height:clamp(44px,6vw,70px);min-height:0;animation:woodstockFloat 4.5s ease-in-out infinite}
+#together .woodstock-slot img{width:100%;height:100%;object-fit:contain}
+@keyframes woodstockFloat{0%,100%{transform:translate3d(0,0,0) rotate(-4deg)}50%{transform:translate3d(8px,-10px,0) rotate(5deg)}}
+@media(max-width:700px){
+ #together .final-stage{grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);min-height:clamp(300px,52svh,420px);padding:58px 4% 40px;gap:5px}
+ #together .peanuts-slot{height:clamp(155px,34vw,220px)}
+ #together .avatar-slot{height:clamp(175px,40vw,250px)}
+ #together .woodstock-slot{top:8%;left:56%;width:52px;height:46px}
+}
+@media(max-width:390px){
+ #together .final-stage{min-height:300px;padding:52px 2.5% 38px}
+ #together .peanuts-slot{height:160px}
+ #together .avatar-slot{height:185px}
+ #together .woodstock-slot{width:44px;height:40px;left:55%}
+}
+
 </style>
 </head>
 <body>
@@ -1198,10 +1222,15 @@ body{overflow:hidden;font-family:'DM Sans',sans-serif}
           </g>
         </svg>
       </div>
-      <!-- Keep these image positions empty so you can add your own pictures. -->
-      <div class="art-slot peanuts-slot" aria-label="Your Peanuts friends picture"></div>
-      <div class="art-slot avatar-slot" aria-label="Your own picture"></div>
-      <div class="art-slot woodstock-slot" aria-label="Your Woodstock picture"></div>
+      <div class="art-slot peanuts-slot">
+        <img src="assets/peanuts-friends.avif" alt="Snoopy and the Peanuts friends gathered together">
+      </div>
+      <div class="art-slot avatar-slot">
+        <img src="assets/avatar-open-arms.avif" alt="Smiling cartoon avatar with open arms">
+      </div>
+      <div class="art-slot woodstock-slot">
+        <img src="assets/woodstock.avif" alt="" aria-hidden="true">
+      </div>
     </div>
   </div>
 <nav class="page-controls" aria-label="Page navigation">
