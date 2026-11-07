@@ -471,6 +471,162 @@ body,button,input{font-family:'DM Sans',sans-serif}
   #garden .note-four{max-width:34%!important}
 }
 
+
+/* --- Cohesive editorial redesign: every page --- */
+:root{
+ --ink:#59434a;--muted:#92777b;--rose:#d78f9d;--rose-deep:#a96879;
+ --cream:#fffaf4;--sage:#9eaf91;--gold:#d6b477;
+ --shadow-soft:0 24px 65px rgba(112,75,78,.13);
+}
+body{font-family:'DM Sans',sans-serif;background:#fbf2ed;color:var(--ink)}
+.section-head h2,.welcome-card h1,.final-caption h2{
+ font-family:'Playfair Display',Georgia,serif!important;
+ letter-spacing:.015em;font-weight:500!important;
+}
+.eyebrow{letter-spacing:.24em}
+.page-section{isolation:isolate}
+.page-section:before{
+ content:"";position:absolute;inset:14px;z-index:-1;pointer-events:none;
+ border:1px solid rgba(177,128,132,.18);border-radius:3px;
+}
+.page-controls{padding-top:18px;padding-bottom:max(16px,env(safe-area-inset-bottom));}
+.page-btn{min-height:46px;backdrop-filter:blur(12px);border-radius:6px;letter-spacing:.04em}
+.page-btn.page-next{background:linear-gradient(135deg,#966875,#76535e);box-shadow:0 7px 20px rgba(118,83,94,.2)}
+.page-btn:hover,.btn:hover{transform:translateY(-2px)}
+/* Welcome: framed botanical invitation */
+#welcome.page-section{background:
+ radial-gradient(ellipse at 50% 15%,rgba(255,255,255,.92),transparent 48%),
+ linear-gradient(145deg,#f9e9e5,#f2d9d9 58%,#e9d9d0)}
+#welcome:after{border-color:rgba(177,128,132,.24)}
+.floral-wrap{opacity:.78}
+.floral-sprig{filter:drop-shadow(0 9px 12px rgba(112,75,78,.08))}
+.welcome-card{
+ border-radius:2px;padding:clamp(30px,6vw,58px) clamp(22px,5vw,48px);
+ background:linear-gradient(145deg,rgba(255,252,247,.96),rgba(255,246,240,.9));
+ border:1px solid #dfbdba;box-shadow:0 25px 75px rgba(143,93,102,.17);
+}
+.welcome-card:before{inset:9px;border:1px solid rgba(191,139,145,.32)}
+.welcome-art-fixed{filter:drop-shadow(0 12px 13px rgba(145,93,98,.12))}
+.welcome-card h1{color:#76515d;font-size:clamp(2.45rem,7vw,4.1rem)!important}
+.welcome-message{color:#98747b!important;font-size:clamp(1.22rem,3vw,1.5rem)!important}
+/* Music: a quiet listening-room composition */
+#music.page-section{background:
+ radial-gradient(ellipse at 50% 40%,rgba(255,252,246,.96),rgba(255,252,246,.15) 54%),
+ linear-gradient(145deg,#f5e6dc,#ead3ca)}
+#music .section-head{margin-bottom:clamp(18px,4vh,36px)}
+#music .section-head h2{font-size:clamp(2.8rem,7vw,4.5rem)!important;color:#77525c}
+#music .vintage-player{
+ position:relative;padding:clamp(20px,4vw,34px);border:1px solid #b88f7d;
+ border-radius:5px;background:linear-gradient(145deg,#f6e4d2 0%,#e8cbb5 48%,#d8b49d 100%);
+ box-shadow:0 26px 60px rgba(115,77,67,.2),inset 0 1px rgba(255,255,255,.8);
+}
+#music .vintage-player:before{content:"";position:absolute;inset:8px;border:1px solid rgba(130,91,73,.25);pointer-events:none}
+#music .player-display{padding:9px;background:#705d55;border:5px solid #c8a78f;box-shadow:inset 0 0 0 2px #f2dfcd}
+#music .player-screen{overflow:hidden;border-radius:2px;background:#fff}
+#music .player-screen iframe{display:block;width:100%;max-width:100%}
+#music .player-track-name{font-size:1.3rem;color:#65464b}
+#music .player-track-artist{color:#896c68}
+#music .music-floral{filter:drop-shadow(0 12px 12px rgba(126,86,80,.13));opacity:.86}
+#music .music-floral-left{transform:rotate(-7deg)}
+#music .music-floral-right{transform:rotate(8deg)}
+/* Reminder: stationery, with a restrained six-envelope arrangement */
+#letters.page-section{background:
+ radial-gradient(ellipse at 50% 15%,#fffdf8 0%,rgba(255,250,244,.35) 52%),
+ linear-gradient(145deg,#f9e9e4,#f0d8d5)}
+#letters .section-head{margin-bottom:clamp(22px,4vh,40px)}
+#letters .section-head h2{font-size:clamp(2.7rem,6vw,4rem)!important;color:#79545d}
+#letters .envelopes{gap:clamp(15px,3vw,30px);max-width:780px}
+#letters .envelope{height:clamp(142px,22vh,190px);max-width:220px;transform:translateZ(0);filter:drop-shadow(0 12px 14px rgba(131,83,84,.13))}
+#letters .env-paper{inset:14px 5px 5px;border-radius:3px;background:linear-gradient(145deg,#fffaf3,#edcfd0);border:1px solid #d9b3b5}
+#letters .env-flap{left:5px;right:5px;top:14px;height:54%;background:linear-gradient(150deg,#fffaf5,#f1d7d5);border-bottom:1px solid rgba(190,137,142,.32)}
+#letters .env-lily{top:48%;width:48px;height:48px;padding:5px;background:#fff9f2;border:1px solid #e6c7c5;box-shadow:0 5px 13px rgba(127,80,84,.15)}
+#letters .envelope.is-open .env-flap{transform:rotateX(180deg)}
+#letters .letter-reveal{scroll-margin:18px}
+#letters .letter-reveal-card{background:linear-gradient(145deg,#fffdf8,#fff3ec);border:1px solid #dfbfc0;box-shadow:0 15px 38px rgba(115,77,82,.13)}
+#letters .letter-reveal-card:before{content:"";position:absolute;inset:8px;border:1px solid rgba(205,159,158,.3);pointer-events:none}
+#letters .letter-reveal-card p{max-width:540px;color:#76545d;font-size:clamp(1.18rem,2.8vw,1.48rem)!important}
+.letter-reveal-close{z-index:2}
+/* Garden: botanical conservatory, with notes placed around—not over—the flowers */
+#garden.page-section{background:
+ radial-gradient(ellipse at 50% 8%,#fffdf5 0%,rgba(249,248,235,.35) 47%),
+ linear-gradient(155deg,#eff0e2,#dce8d7)}
+#garden .garden-heading h2{font-size:clamp(2.8rem,6vw,4rem)!important;color:#76545c}
+#garden .garden-layout{min-height:min(66vh,620px);max-width:1040px}
+#garden .garden-ground{
+ background:linear-gradient(180deg,#edf0df 0%,#d5e1c8 60%,#a9c29c 100%);
+ border:1px solid rgba(111,139,100,.35);box-shadow:inset 0 0 70px rgba(255,255,255,.55),0 20px 48px rgba(82,112,78,.14);
+}
+#garden .garden-ground:after{content:"";position:absolute;inset:auto 0 0;height:25%;background:linear-gradient(180deg,transparent,rgba(91,125,82,.14));pointer-events:none}
+#garden .flower-bed{filter:drop-shadow(0 10px 8px rgba(73,100,68,.14))}
+#garden .flower-svg{filter:drop-shadow(0 4px 3px rgba(105,75,81,.08))}
+#garden .garden-note{
+ font-family:'Cormorant Garamond',Georgia,serif!important;font-style:italic!important;
+ font-weight:600!important;color:#76515c!important;
+ background:rgba(255,252,244,.82)!important;border:1px solid rgba(191,151,145,.32);
+ border-radius:3px!important;padding:7px 10px!important;
+ box-shadow:0 5px 16px rgba(91,111,80,.08);text-shadow:none!important;
+ max-width:220px!important;line-height:1.18!important;
+}
+#garden .note-one{top:4%;left:4%;transform:rotate(-4deg)}
+#garden .note-two{top:5%;right:4%;transform:rotate(3deg)}
+#garden .note-three{top:47%;left:1%;transform:rotate(-2deg)}
+#garden .note-four{top:47%;right:1%;transform:rotate(2deg)}
+#garden .note-five{bottom:0;left:42%;transform:rotate(-2deg)}
+#garden .water-btn{margin-top:14px;min-width:190px;background:linear-gradient(135deg,#7c9674,#607b62);border-color:#6f8969}
+#garden .water-count{font-family:'DM Sans',sans-serif;letter-spacing:.14em;color:#687e61}
+#garden .butterfly{filter:drop-shadow(0 3px 4px rgba(126,91,92,.18))}
+.bloom-message{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem}
+/* Final page: gallery-like frame, intentionally empty image slots */
+#together.page-section{background:
+ radial-gradient(ellipse at 50% 12%,#fffdf7 0%,rgba(255,248,241,.2) 52%),
+ linear-gradient(145deg,#f8e9e3,#eadbd4)}
+#together .final-heading h2{font:500 clamp(2.2rem,5.8vw,3.7rem)/1.15 'Playfair Display',Georgia,serif!important;color:#76515d}
+#together .final-stage{
+ min-height:min(58vh,520px);border:1px solid #dfc5b9;border-radius:3px;
+ outline:8px solid rgba(255,250,243,.78);background:linear-gradient(180deg,#f8e8dd 0 70%,#d8c8b5 70% 100%);
+ box-shadow:0 25px 65px rgba(118,82,75,.15);overflow:hidden;
+}
+#together .final-stage:before{top:24px;left:4%;width:92%;background:rgba(190,147,130,.38)}
+#together .final-stage:after{height:45px;background:rgba(190,147,130,.38)}
+#together .art-slot{border:1px dashed rgba(147,111,102,.28);background:rgba(255,250,243,.12);border-radius:4px}
+#together .final-garden-flowers{opacity:.92}
+@media(max-width:700px){
+ .page-section:before{inset:7px}
+ #welcome.page-section{padding:16px 12px 84px!important}
+ .welcome-card{width:min(100%,520px);padding:24px 17px 28px}
+ #music .music-floral-left{left:-27px;bottom:0;width:104px;opacity:.58}
+ #music .music-floral-right{right:-27px;top:0;width:104px;opacity:.58}
+ #music .vintage-player{padding:18px 14px;width:min(100%,460px)}
+ #letters .envelopes{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 15px;width:min(100%,520px)}
+ #letters .envelope{height:clamp(128px,17vh,160px);max-width:none}
+ #letters .env-lily{width:42px;height:42px}
+ #letters .letter-reveal.show{max-height:300px}
+ #letters .letter-reveal-card{padding:30px 34px 24px}
+ #garden .garden-layout{min-height:58vh;min-height:clamp(430px,58svh,570px)}
+ #garden .garden-ground{inset:13% 1% 5%;border-radius:34% 34% 14px 14px/12% 12% 14px 14px}
+ #garden .garden-bed-row{inset:20% 7% 2%;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:0 10px}
+ #garden .flower-bed{width:min(100%,132px);max-height:220px}
+ #garden .garden-note{font-size:clamp(.82rem,3.1vw,1rem)!important;max-width:34%!important;padding:5px 6px!important}
+ #garden .note-one{top:0!important;left:0!important;right:auto!important;bottom:auto!important}
+ #garden .note-two{top:0!important;right:0!important;left:auto!important;bottom:auto!important}
+ #garden .note-three{top:48%!important;left:0!important;right:auto!important;bottom:auto!important;max-width:31%!important}
+ #garden .note-four{top:48%!important;right:0!important;left:auto!important;bottom:auto!important;max-width:32%!important}
+ #garden .note-five{bottom:0!important;left:34%!important;right:auto!important;top:auto!important;max-width:34%!important}
+ #garden .water-btn{margin-top:8px}
+ #together .final-stage{min-height:45svh;padding:36px 3% 28px}
+}
+@media(max-width:390px){
+ #garden .garden-layout{min-height:430px}
+ #garden .garden-note{font-size:.78rem!important;max-width:32%!important;padding:4px 5px!important}
+ #garden .note-three{max-width:29%!important}
+ #garden .note-four{max-width:30%!important}
+ #garden .note-five{left:33%!important;max-width:35%!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .page-section.active{animation:none!important}
+ .page-btn,.btn,.envelope,#letters .letter-reveal{transition:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -868,9 +1024,9 @@ window.addEventListener("hashchange", () => {
 });
 
 const reminders = [
-  "Even when the world feels wide,\nAnd you feel left out of the tide,\nI hope you'll always come to see,\nThere's a place where you're welcome to be.",
-  "You need not smile through every day,\nOr hide the things you cannot say.\nYou deserve kindness, soft and true,\nOn cloudy days and sunny ones too.",
   "May gentle days find their way to you,\nMay hope stay near in all you do.\nAnd when the world feels cold or new,\nMay you remember: you matter too.",
+  "You need not smile through every day,\nOr hide the things you cannot say.\nYou deserve kindness, soft and true,\nOn cloudy days and sunny ones too.",
+  "Even when the world feels wide,\nAnd you feel left out of the tide,\nI hope you'll always come to see,\nThere's a place where you're welcome to be.",
   "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
   "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.",
   "The LORD hath appeared of old unto me, saying, Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee."
