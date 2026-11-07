@@ -94,6 +94,65 @@ body{background:linear-gradient(180deg,#fbf5ef,#f8eee7 45%,#f4e8df)}
  .woodstock-slot{width:78px;right:5%}
 }
 
+
+/* Unified composition and alignment pass */
+:root{--content-width:1080px;--section-gutter:clamp(22px,5.5vw,76px);--section-space:clamp(72px,8.2vw,108px)}
+html{scroll-padding-top:18px}body{min-width:320px}
+.section{padding:var(--section-space) var(--section-gutter)}
+.section-inner{width:min(100%,var(--content-width));margin-inline:auto}
+.section-head{width:min(100%,650px);margin:0 auto clamp(34px,4.5vw,52px);text-wrap:pretty}
+.section-head h2{max-width:15ch;margin:12px auto 14px;line-height:1.08}
+.section-head p{max-width:44ch;margin-inline:auto;line-height:1.75}
+.eyebrow{line-height:1.5}.btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center;gap:9px;line-height:1.2}
+button{-webkit-tap-highlight-color:transparent}
+#welcome{min-height:100svh;padding:clamp(22px,5vw,54px);display:grid;place-items:center}
+.welcome-card{width:min(100%,620px);margin:auto;padding:clamp(42px,7vw,64px) clamp(22px,5vw,48px)}
+.welcome-card p{max-width:36ch}
+#room .section-inner{max-width:1100px}
+.room-scene{width:100%;height:clamp(360px,46.4vw,510px);margin-inline:auto}
+.room-controls{width:min(100%,760px);margin:26px auto 0;align-items:center;gap:12px}
+.music-panel{width:min(100%,520px);margin:30px auto 0;padding:clamp(18px,3vw,24px)}
+.music-panel iframe{display:block}
+#letters .section-inner{max-width:980px}
+.envelopes{width:min(100%,850px);grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:clamp(14px,3vw,28px)}
+.envelope{width:100%;max-width:260px;justify-self:center;min-width:0}
+.letter-modal{z-index:50}.letter-card{width:min(100%,460px);max-height:min(82svh,620px);overflow:auto}
+.letter-card p:empty{display:none}
+#garden .section-inner{max-width:1000px}
+.garden-ground{width:100%;min-height:390px;padding:64px clamp(14px,4vw,38px) 30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;justify-items:center;column-gap:clamp(8px,2.5vw,28px);border-radius:48% 48% 4px 4px/15% 15% 4px 4px}
+.flower-bed{width:min(100%,132px);height:230px;justify-self:center}
+.flower-svg{display:block;width:100%;height:190px}
+.flower-bed .label{min-height:1.2em;text-align:center}
+.water-btn{min-width:190px;margin:28px auto 0}
+.water-count{min-height:1.4em;font-variant-numeric:tabular-nums}.bloom-message{min-height:1.7em}
+#together .section-inner{max-width:1000px}
+.final-stage{width:100%;min-height:clamp(320px,40vw,430px);display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,.9fr);grid-template-rows:1fr;align-items:end;justify-items:center;gap:clamp(12px,3vw,34px);padding:clamp(54px,7vw,76px) clamp(18px,5vw,56px) 28px}
+.art-slot{border:0;background:transparent;backdrop-filter:none;min-height:0;padding:0;filter:none}
+.peanuts-slot{grid-column:1;grid-row:1;width:100%;height:100%;min-height:230px}
+.avatar-slot{grid-column:2;grid-row:1;width:100%;height:78%;min-height:180px;align-self:end}
+.woodstock-slot{grid-column:1;grid-row:1;justify-self:end;align-self:start;width:clamp(58px,10vw,100px);height:clamp(48px,8vw,76px);min-height:0;margin-right:8%;margin-top:-24px;border:0;background:transparent;padding:0;animation:woodstockFloat 4.5s ease-in-out infinite}
+.final-caption{width:min(100%,560px);margin:clamp(28px,4vw,40px) auto 0;text-align:center}
+.final-caption h2{line-height:1.1}.final-caption p{max-width:44ch;margin:12px auto 22px;line-height:1.75}
+.footer{line-height:1.7}
+@media(max-width:700px){
+ .section{padding:76px 20px}.section-head{margin-bottom:34px}.section-head h2{max-width:17ch}
+ .room-scene{height:clamp(350px,60vw,420px)}.room-controls{max-width:420px}.room-controls .btn{flex:1 1 145px}
+ .envelopes{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.envelope{max-width:230px;height:168px}
+ .garden-ground{min-height:300px;padding:52px 8px 22px;column-gap:4px}
+ .flower-bed{height:188px;width:100%;max-width:112px}.flower-svg{height:155px}.flower-bed .label{font-size:.62rem}
+ .final-stage{min-height:300px;padding:54px 12px 22px;gap:8px}.peanuts-slot{min-height:190px}
+ .avatar-slot{min-height:145px;height:75%}.woodstock-slot{width:66px;height:54px;margin-right:6%;margin-top:-15px}
+}
+@media(max-width:420px){
+ .section{padding-inline:16px}.room-scene{height:360px}.room-controls .btn{flex-basis:100%}
+ .envelopes{gap:8px}.envelope{height:150px}.env-label{font-size:1rem}
+ .garden-ground{min-height:258px;padding-top:42px}.flower-bed{height:158px}.flower-svg{height:126px}
+ .flower-bed .label{font-size:.56rem;letter-spacing:.1em}
+ .final-stage{min-height:260px;padding:48px 8px 18px}.peanuts-slot{min-height:165px}
+ .avatar-slot{min-height:126px}.woodstock-slot{width:54px;height:44px}.final-caption p{padding-inline:8px}
+}
+@media(prefers-reduced-motion:reduce){.woodstock-slot{animation:none}}
+
 </style>
 </head>
 <body>
@@ -136,7 +195,7 @@ body{background:linear-gradient(180deg,#fbf5ef,#f8eee7 45%,#f4e8df)}
  </div>
 </section>
 <div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
- <div class="letter-card"><button class="close-modal" id="closeModal" aria-label="Close">×</button><div class="eyebrow">a note for you</div><h3 id="letterTitle">This envelope is waiting.</h3><p id="letterBody">Your message will go here when you provide it.</p></div>
+ <div class="letter-card"><button class="close-modal" id="closeModal" aria-label="Close">×</button><div class="eyebrow">a note for you</div><h3 id="letterTitle">This envelope is waiting.</h3><p id="letterBody" aria-live="polite"></p></div>
 </div>
 
 <section class="section" id="garden">
@@ -159,9 +218,12 @@ body{background:linear-gradient(180deg,#fbf5ef,#f8eee7 45%,#f4e8df)}
   <div class="section-head"><div class="eyebrow">04 · a warm welcome</div><h2>There is room for you here.</h2><p>A little gathering, with open arms and a tiny bird who can't sit still.</p></div>
   <div class="final-stage">
    <div class="final-garden-glow" aria-hidden="true"></div>
-   <div class="art-slot peanuts-slot"><span class="slot-kicker">THE WELCOMING GROUP</span><strong>Peanuts friends</strong><small>Your original group image goes here</small></div>
-   <div class="art-slot avatar-slot"><span class="slot-kicker">A PLACE FOR YOU</span><strong>Your avatar</strong><small>Add your own image here</small></div>
-   <div class="art-slot woodstock-slot"><span class="slot-kicker">ABOVE THE GROUP</span><strong>Woodstock</strong><small>Separate flying image</small></div>
+   <!-- Add your unchanged group artwork inside this position when you are ready. -->
+   <div class="art-slot peanuts-slot" role="img" aria-label="Reserved position for the Peanuts friends group image"></div>
+   <!-- Add your avatar image inside this position when you are ready. -->
+   <div class="art-slot avatar-slot" role="img" aria-label="Reserved position for your avatar image"></div>
+   <!-- Add your unchanged Woodstock image inside this position when you are ready. -->
+   <div class="art-slot woodstock-slot" role="img" aria-label="Reserved position for the flying Woodstock image"></div>
   </div>
   <div class="final-caption"><h2 class="serif">A soft landing.</h2><p>This little corner will be here whenever you want to visit.</p><button class="btn" id="backTop">Back to the beginning</button></div>
  </div>
@@ -175,7 +237,7 @@ $('#gardenJump').addEventListener('click',()=>$('#garden').scrollIntoView({behav
 $('#roomMusicBtn').addEventListener('click',()=>$('#music').scrollIntoView({behavior:'smooth',block:'center'}));
 $('#backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 let lampOn=false;$('#lampBtn').addEventListener('click',()=>{lampOn=!lampOn;$('.lamp-glow').style.background=lampOn?'radial-gradient(ellipse,rgba(255,224,160,.75),transparent 70%)':'radial-gradient(ellipse,rgba(255,224,160,.18),transparent 70%)';$('#lampBtn').textContent=lampOn?'Turn the lamp off':'Turn the lamp on'});
-const modal=$('#letterModal');const titles=['A little note','For later','Just because'];$$('.envelope').forEach((env)=>env.addEventListener('click',()=>{const i=Number(env.dataset.letter);$('#letterTitle').textContent=titles[i];$('#letterBody').textContent='Your message will go here when you provide it.';modal.classList.add('show')}));$('#closeModal').addEventListener('click',()=>modal.classList.remove('show'));modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('show')});
+const modal=$('#letterModal');const titles=['A little note','For later','Just because'];$$('.envelope').forEach((env)=>env.addEventListener('click',()=>{const i=Number(env.dataset.letter);$('#letterTitle').textContent=titles[i];$('#letterBody').textContent='';modal.classList.add('show')}));$('#closeModal').addEventListener('click',()=>modal.classList.remove('show'));modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('show')});
 let water=0;const beds=$$('.flower-bed');$('#waterBtn').addEventListener('click',()=>{if(water>=4)return;water++;beds[water-1].classList.add('bloomed');$('#waterCount').textContent=water+' of 4 flowers have bloomed';if(water===2)$('#butterflyA').classList.add('show');if(water===3)$('#butterflyB').classList.add('show');if(water===4){$('#bloomMessage').classList.add('show');$('#waterBtn').textContent='The garden is blooming';$('#waterBtn').disabled=true}});
 </script>
 </body>
