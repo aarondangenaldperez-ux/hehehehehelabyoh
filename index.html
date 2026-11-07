@@ -744,6 +744,39 @@ body{overflow:hidden;font-family:'DM Sans',sans-serif}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.page-section.active,.page-btn,.btn,.envelope,#letters .letter-reveal{animation:none!important;transition:none!important}}
 
+
+/* Final functional corrections: keep navigation fixed and tabs independently scrollable */
+.page-section{
+  overflow-x:hidden!important;
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-y:contain;
+}
+.page-section.active{
+  animation:screenFade .42s ease both!important;
+  transform:none!important;
+}
+@keyframes screenFade{
+  from{opacity:0}
+  to{opacity:1}
+}
+.page-section > .page-controls{
+  position:fixed!important;
+  inset:auto 0 0 0!important;
+  z-index:100!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  gap:12px;
+  padding:13px max(20px,calc((100vw - 1050px)/2)) calc(13px + env(safe-area-inset-bottom))!important;
+  background:linear-gradient(180deg,transparent,rgba(255,249,244,.97) 40%)!important;
+  backdrop-filter:blur(10px);
+  pointer-events:none!important;
+}
+.page-section > .page-controls > *{
+  pointer-events:auto!important;
+}
+
 </style>
 </head>
 <body>
@@ -1122,6 +1155,7 @@ const showPage = (id, updateHistory = true) => {
     const active = page.id === id;
     page.classList.toggle("active", active);
     page.setAttribute("aria-hidden", active ? "false" : "true");
+    if (active) page.scrollTop = 0;
   });
   document.body.dataset.currentPage = id;
   if (updateHistory) history.replaceState({page:id}, "", "#"+id);
