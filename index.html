@@ -803,6 +803,44 @@ body{overflow:hidden;font-family:'DM Sans',sans-serif}
  #garden .note-five{top:3%!important;left:50%!important;max-width:80%!important}
 }
 
+
+/* Mobile tab proportions: keep the music and garden pages compact */
+@media(max-width:700px){
+  #music.page-section{justify-content:flex-start!important;padding-top:24px!important;padding-bottom:calc(88px + env(safe-area-inset-bottom))!important}
+  #music .music-inner{margin:8px auto 0!important;width:100%;gap:10px!important}
+  #music .section-head{margin:0 auto 8px!important}
+  #music .section-head h2{font-size:clamp(2.35rem,8vw,3.1rem)!important;line-height:1.02!important}
+  #music .vintage-player{width:min(100%,390px)!important;padding:12px 10px!important}
+  #music .player-topline{margin-bottom:8px!important}
+  #music .player-display{padding:9px 7px!important}
+  #music .player-screen{width:min(100%,320px)!important}
+  #music .player-screen iframe{height:118px!important}
+  #music .player-bottom{margin-top:9px!important;gap:10px!important}
+  #music .music-floral{width:clamp(76px,18vw,112px)!important;opacity:.48!important}
+  #music .music-floral-left{left:-16px!important;bottom:3%!important}
+  #music .music-floral-right{right:-16px!important;top:3%!important}
+  #garden.page-section{justify-content:flex-start!important;padding-top:24px!important;padding-bottom:calc(88px + env(safe-area-inset-bottom))!important}
+  #garden .garden-page-inner{margin:0 auto!important}
+  #garden .garden-heading{margin:0 auto 8px!important}
+  #garden .garden-heading h2{font-size:clamp(2.6rem,9vw,3.3rem)!important;line-height:1!important}
+  #garden .garden-layout{min-height:470px!important;height:470px!important;margin:0 auto 8px!important}
+  #garden .garden-ground{inset:88px 1% 54px!important}
+  #garden .garden-bed-row{inset:0 5% 0!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr))!important;gap:0 8px!important;padding:16px 6px!important}
+  #garden .flower-bed{width:min(100%,132px)!important;height:190px!important}
+  #garden .flower-svg{height:170px!important}
+  #garden .garden-note{font-size:clamp(.88rem,3.5vw,1.05rem)!important;line-height:1.2!important;max-width:34%!important}
+  #garden .note-one,#garden .note-two{top:1%!important}
+  #garden .note-three,#garden .note-four{top:45%!important}
+  #garden .note-five{top:2%!important;max-width:76%!important}
+  #garden .water-btn{margin:6px auto 0!important;padding:10px 20px!important;min-height:42px!important}
+  #garden .water-count{margin-top:6px!important}
+}
+@media(max-width:390px){
+  #garden .garden-layout{height:440px!important;min-height:440px!important}
+  #garden .flower-bed{height:178px!important}
+  #garden .flower-svg{height:158px!important}
+}
+
 </style>
 </head>
 <body>
@@ -992,10 +1030,10 @@ body{overflow:hidden;font-family:'DM Sans',sans-serif}
     <header class="section-head garden-heading"><h2>lileyzzz</h2></header>
     <div class="garden-layout garden-scatter-layout">
       <div class="garden-notes" aria-label="Comforting words">
-        <p class="garden-note note-one" aria-hidden="true">i lawb you, zobraaah</p>
-        <p class="garden-note note-two" aria-hidden="true">you look lovely, like lilies and tulips</p>
-        <p class="garden-note note-three" aria-hidden="true">my favourite person and bestfriend</p>
-        <p class="garden-note note-four" aria-hidden="true">you can handle anything</p>
+        <p class="garden-note note-one" aria-hidden="true">i lawb you zobraaah</p>
+        <p class="garden-note note-two" aria-hidden="true">you look like lilies and tulips, very magandah</p>
+        <p class="garden-note note-three" aria-hidden="true">you are my favourite person, my favourite bestfriend</p>
+        <p class="garden-note note-four" aria-hidden="true">you can handle anything because you've already handled everything</p>
         <p class="garden-note note-five" aria-hidden="true">fiel, a lovely poem</p>
       </div>
       <div class="garden-ground" aria-label="A garden of two lilies and two tulips">
