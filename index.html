@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f4e6df">
 <title>heheheheylow</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
 :root{--paper:#fbf4eb;--cream:#f5e9dc;--rose:#d99a9b;--rose2:#edc5bf;--ink:#51443e;--muted:#8d7b71;--green:#87977b;--deepgreen:#586b59;--gold:#d9b77f;--line:rgba(103,79,67,.17);--shadow:0 22px 60px rgba(94,67,52,.12)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}button{font:inherit;color:inherit}button:focus-visible,a:focus-visible{outline:3px solid #b8797b;outline-offset:4px}.serif{font-family:'Playfair Display',serif}.eyebrow{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}.section{padding:100px 7vw;position:relative}.section-inner{max-width:1100px;margin:auto}.section-head{text-align:center;max-width:650px;margin:0 auto 48px}.section-head h2{font:500 clamp(2.2rem,5vw,3.5rem)/1.08 'Playfair Display',serif;margin:12px 0}.section-head p{color:var(--muted);line-height:1.8;margin:12px auto 0;max-width:480px}.btn{border:1px solid rgba(95,73,61,.25);border-radius:999px;background:#fff9f2;padding:13px 22px;cursor:pointer;transition:.25s;letter-spacing:.03em}.btn:hover{transform:translateY(-2px);background:#fff}.btn.primary{background:#745d53;color:#fff9f2;border-color:#745d53}.btn.primary:hover{background:#5f4a42}.tiny-note{font-size:.76rem;color:var(--muted)}
 /* welcome */
@@ -421,6 +421,55 @@ body,button,input{font-family:Arial,Helvetica,sans-serif}
  #letters .letter-reveal-card{padding:26px 38px 20px;min-height:112px}
 }
 @media(prefers-reduced-motion:reduce){.page-section.active{animation:none}.letter-reveal,.page-btn,.btn,.envelope{transition:none!important}}
+
+
+/* Typography refinement and reliable mobile garden-note placement */
+body,button,input{font-family:'DM Sans',sans-serif}
+.serif,.section-head h2,.welcome-card h1,.letter-card p,.player-track-name,.env-label{
+  font-family:'Playfair Display',Georgia,serif!important;
+  font-style:normal!important;
+}
+.welcome-message{font-family:'Cormorant Garamond',Georgia,serif!important;font-size:1.35rem!important;font-weight:600!important}
+.section-head h2,.welcome-card h1{letter-spacing:.01em}
+#garden .garden-note{
+  font-family:'Cormorant Garamond',Georgia,serif!important;
+  font-style:italic!important;
+  font-weight:600!important;
+  font-size:clamp(1.02rem,2vw,1.28rem)!important;
+  line-height:1.18!important;
+  color:#76505d;
+  background:rgba(255,250,244,.42);
+  text-shadow:0 1px 2px rgba(255,255,255,.96);
+}
+#letters .letter-reveal-card p{
+  font-family:'Cormorant Garamond',Georgia,serif!important;
+  font-size:clamp(1.18rem,2.7vw,1.45rem)!important;
+  font-weight:500!important;
+  line-height:1.5!important;
+}
+#letters .section-head h2,#music .section-head h2,#garden .garden-heading h2{
+  font-family:'Playfair Display',Georgia,serif!important;
+}
+@media(max-width:700px){
+  #garden .garden-note{
+    font-size:clamp(.96rem,3.15vw,1.13rem)!important;
+    max-width:36%!important;
+    width:auto!important;
+    padding:3px 5px;
+    background:rgba(255,250,244,.68);
+    border-radius:7px;
+  }
+  #garden .note-one{top:2%!important;left:1%!important;right:auto!important;bottom:auto!important;text-align:left!important;transform:rotate(-5deg)}
+  #garden .note-two{top:3%!important;right:1%!important;left:auto!important;bottom:auto!important;text-align:right!important;transform:rotate(4deg)}
+  #garden .note-three{top:48%!important;left:0!important;right:auto!important;bottom:auto!important;max-width:35%!important;text-align:left!important;transform:rotate(-3deg)}
+  #garden .note-four{top:49%!important;right:0!important;left:auto!important;bottom:auto!important;max-width:36%!important;text-align:right!important;transform:rotate(3deg)}
+  #garden .note-five{bottom:1%!important;left:31%!important;right:auto!important;top:auto!important;max-width:40%!important;text-align:center!important;transform:rotate(-2deg)}
+}
+@media(max-width:390px){
+  #garden .garden-note{font-size:.9rem!important;max-width:34%!important}
+  #garden .note-three{max-width:32%!important}
+  #garden .note-four{max-width:34%!important}
+}
 
 </style>
 </head>
