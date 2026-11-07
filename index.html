@@ -22,137 +22,106 @@
 @media(max-width:700px){.section{padding:76px 5vw}.room-scene{height:420px}.window{left:6%;width:32%;height:37%}.picture{right:8%;width:72px;height:88px}.shelf{right:5%;width:30%}.sofa{left:19%;width:52%;height:29%}.cushion{left:24%;bottom:21%;width:65px}.throw{right:20%;bottom:16%;width:75px}.lamp{right:7%;bottom:20%;transform:scale(.8);transform-origin:bottom}.table{right:3%;width:17%}.room-caption{font-size:.85rem}.envelopes{grid-template-columns:repeat(2,1fr);gap:12px}.envelope{height:170px}.garden-ground{gap:8px;padding-left:6px;padding-right:6px;min-height:300px}.flower-bed{width:25%;height:190px}.flower-svg{width:100%;height:160px}.friend{width:31%;height:180px}.final-stage{min-height:280px;padding-bottom:18px}}@media(max-width:390px){.room-scene{height:365px}.sofa{left:15%;width:55%}.lamp{right:2%;transform:scale(.68)}.book{left:8%}.envelope{height:155px}.garden-ground{min-height:255px}.flower-bed{height:160px}.flower-svg{height:130px}.friend{height:145px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
-/* refined visual pass: cohesive paper, depth, spacing and responsive art layout */
-:root{--paper:#fbf5ef;--cream:#f6e9df;--rose:#d49396;--rose2:#edc9c2;--ink:#493b37;--muted:#8d7970;--green:#899b80;--deepgreen:#536c57;--gold:#d9b77f;--line:rgba(103,79,67,.15);--shadow:0 24px 70px rgba(94,67,52,.13)}
-body{background:linear-gradient(180deg,#fbf5ef,#f8eee7 45%,#f4e8df)}
-.section{padding-top:clamp(76px,9vw,112px);padding-bottom:clamp(76px,9vw,112px)}
-.section-head{margin-bottom:clamp(34px,5vw,54px)}
-.section-head .eyebrow{color:#a17e73}
-.section-head h2{letter-spacing:-.025em}
-.section-head p{font-size:.96rem}
-.btn{box-shadow:0 5px 14px rgba(99,70,55,.06)}
+
+/* Single responsive refinement layer */
+:root{--paper:#fbf5ef;--cream:#f6e9df;--rose:#d49396;--rose2:#edc9c2;--ink:#493b37;--muted:#8d7970;--green:#899b80;--deepgreen:#536c57;--gold:#d9b77f;--line:rgba(103,79,67,.15);--shadow:0 24px 70px rgba(94,67,52,.13);--content-width:1080px;--section-gutter:clamp(18px,5vw,64px)}
+html{scroll-padding-top:24px}
+body{min-width:320px;background:linear-gradient(180deg,#fbf5ef,#f8eee7 48%,#f4e8df)}
+body.modal-open{overflow:hidden}
+.section{padding:clamp(76px,8vw,108px) var(--section-gutter);scroll-margin-top:16px}
+.section-inner{width:min(100%,var(--content-width));margin-inline:auto}
+.section-head{width:min(100%,650px);margin:0 auto clamp(34px,4.5vw,52px);text-wrap:pretty}
+.section-head h2{max-width:17ch;margin:12px auto 14px;line-height:1.08;letter-spacing:-.025em;text-wrap:balance}
+.section-head p{max-width:44ch;margin-inline:auto;line-height:1.75}
+button{-webkit-tap-highlight-color:transparent}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:9px;line-height:1.2;box-shadow:0 5px 14px rgba(99,70,55,.06);transition:transform .22s ease,background .22s ease,box-shadow .22s ease}
+.btn:hover{box-shadow:0 9px 20px rgba(99,70,55,.1)}
 .btn:active{transform:translateY(0) scale(.98)}
-#welcome{background:radial-gradient(ellipse at 50% 28%,#fffaf3 0,#f6e8e1 53%,#e9d6d0 100%)}
-#welcome:before,#welcome:after{border-color:rgba(155,119,102,.16)}
-.welcome-card{border-radius:3px;box-shadow:0 28px 90px rgba(94,67,52,.14);background:rgba(255,250,244,.78)}
-.welcome-art{filter:drop-shadow(0 8px 10px rgba(112,86,68,.10))}
+.btn:disabled{cursor:default;opacity:.62;transform:none;box-shadow:none}
+#welcome{min-height:100svh;padding:clamp(22px,5vw,54px);display:grid;place-items:center}
+.welcome-card{width:min(100%,620px);margin:auto;padding:clamp(42px,7vw,64px) clamp(22px,5vw,48px);background:rgba(255,250,243,.8);box-shadow:0 28px 90px rgba(94,67,52,.14)}
 .welcome-card h1{letter-spacing:-.035em}
+.welcome-card p{max-width:36ch}
 #room{background:linear-gradient(180deg,#eee0d4,#e5d1c2)}
-.room-scene{border:8px solid #fff8ef;outline:1px solid rgba(119,86,68,.12);box-shadow:0 28px 70px rgba(93,65,49,.17);border-radius:3px}
-.room-wallpaper{opacity:.27}
+.room-scene{width:100%;height:clamp(340px,45vw,500px);margin-inline:auto;border:8px solid #fff8ef;border-radius:4px;outline:1px solid rgba(119,86,68,.12);box-shadow:0 28px 70px rgba(93,65,49,.17)}
 .window{box-shadow:inset 0 0 0 2px #b79b89,0 12px 25px rgba(91,70,57,.10)}
 .picture{transform:rotate(2deg)}
 .sofa{box-shadow:inset 0 -12px 0 #9f716c,0 14px 24px rgba(79,53,43,.12)}
 .cushion,.throw{box-shadow:0 5px 12px rgba(79,53,43,.09)}
-.lamp-glow{transition:background .5s ease;mix-blend-mode:screen}
-.lamp .shade{transition:filter .4s ease,background .4s ease}
-.room-caption{letter-spacing:.02em}
-.music-panel{border-radius:4px;box-shadow:0 12px 35px rgba(94,67,52,.06)}
+.room-scene.is-lit .lamp-glow{background:radial-gradient(ellipse,rgba(255,224,160,.78),transparent 70%)}
+.room-scene.is-lit .lamp .shade{background:#f2d69d;filter:brightness(1.12) drop-shadow(0 0 18px rgba(255,221,157,.55))}
+.room-controls{width:min(100%,760px);align-items:center;gap:12px;margin:26px auto 0}
+.room-controls .btn{min-width:170px}
+.music-panel{width:min(100%,520px);margin:30px auto 0;padding:clamp(18px,3vw,24px);border-radius:4px;box-shadow:0 12px 35px rgba(94,67,52,.06)}
+.music-panel iframe{display:block}
+.music-panel.is-focused{animation:musicFocus .9s ease}
+@keyframes musicFocus{0%,100%{box-shadow:0 12px 35px rgba(94,67,52,.06)}35%{box-shadow:0 0 0 5px rgba(212,147,150,.2),0 18px 40px rgba(94,67,52,.12)}}
 #letters{background:linear-gradient(180deg,#faf2e9,#f5e9df)}
-.envelopes{gap:clamp(14px,3vw,26px)}
-.envelope{transition:transform .25s ease;filter:drop-shadow(0 8px 10px rgba(90,62,49,.06))}
-.envelope:hover{transform:translateY(-5px)}
+.envelopes{width:min(100%,850px);grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:clamp(14px,3vw,28px)}
+.envelope{width:100%;max-width:260px;justify-self:center;min-width:0;filter:drop-shadow(0 8px 10px rgba(90,62,49,.07));transition:transform .24s ease,filter .24s ease}
+.envelope:hover{z-index:2;transform:translateY(-5px);filter:drop-shadow(0 14px 14px rgba(90,62,49,.12))}
 .env-paper{background:#ead0c2}
-.env-flap{background:#f3dfd2}
-.seal{background:#b77d7e;box-shadow:0 2px 6px rgba(85,51,48,.15)}
-.letter-card{border-radius:3px;box-shadow:0 32px 90px rgba(33,20,15,.30)}
+.env-flap{background:#f3dfd2;transform-origin:top;transition:transform .55s cubic-bezier(.2,.75,.25,1)}
+.envelope.is-open .env-flap{transform:rotateX(180deg)}
+.envelope.is-open .seal{opacity:0;transform:translate(-50%,-6px)}
+.seal{background:#b77d7e;box-shadow:0 2px 6px rgba(85,51,48,.15);transition:opacity .2s ease,transform .3s ease}
+.letter-modal{z-index:50;backdrop-filter:blur(5px);background:rgba(54,42,37,.58);opacity:0}
+.letter-modal.show{display:grid;animation:modalFade .22s ease forwards}
+@keyframes modalFade{to{opacity:1}}
+.letter-card{width:min(100%,460px);max-height:min(82svh,620px);overflow:auto;border-radius:4px;box-shadow:0 32px 90px rgba(33,20,15,.3);transform:translateY(14px) scale(.98);animation:letterEnter .28s ease forwards}
+@keyframes letterEnter{to{transform:translateY(0) scale(1)}}
+.letter-card p:empty{display:none}
+.close-modal{display:grid;width:36px;height:36px;place-items:center;border-radius:50%;background:rgba(234,208,194,.45);transition:background .2s ease,transform .2s ease}
+.close-modal:hover{background:#ead0c2;transform:rotate(90deg)}
 #garden{background:linear-gradient(180deg,#edf0e6,#e2eadb)}
-.garden-ground{border:1px solid rgba(91,119,83,.12);box-shadow:inset 0 12px 30px rgba(255,255,255,.2);background:linear-gradient(180deg,#e1ead8,#afc2a3 75%,#9db38f)}
-.flower-bed{filter:drop-shadow(0 5px 4px rgba(58,82,53,.10))}
-.flower-bed .label{font-weight:600;letter-spacing:.16em}
-.water-btn{box-shadow:0 8px 18px rgba(83,108,87,.16)}
+.garden-ground{width:100%;min-height:390px;padding:64px clamp(14px,4vw,38px) 30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;justify-items:center;column-gap:clamp(8px,2.5vw,28px);border:1px solid rgba(91,119,83,.12);border-radius:48% 48% 4px 4px/15% 15% 4px 4px;background:linear-gradient(180deg,#e1ead8,#afc2a3 75%,#9db38f);box-shadow:inset 0 12px 30px rgba(255,255,255,.2)}
+.flower-bed{width:min(100%,132px);height:230px;filter:drop-shadow(0 5px 4px rgba(58,82,53,.10))}
+.flower-svg{display:block;width:100%;height:190px;overflow:visible}
+.flower-bed .bud{transform:scale(.25);transform-origin:60px 58px;transform-box:view-box;opacity:.35;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .7s ease}
+.flower-bed.bloomed .bud{transform:scale(1);opacity:1}
+.petal{transition:fill .8s ease,transform .8s ease}
+.flower-bed.bloomed .petal{fill:#f7d9d0}
+.flower-bed.tulip.bloomed .petal{fill:#e5a0a0}
+.flower-bed .label{min-height:1.2em;text-align:center;font-weight:600;letter-spacing:.14em}
+.water-btn{min-width:190px;margin:28px auto 0;box-shadow:0 8px 18px rgba(83,108,87,.16)}
+.water-count{min-height:1.5em;font-variant-numeric:tabular-nums}
+.bloom-message{min-height:1.7em}
+.butterfly{z-index:2;pointer-events:none}
 #together{background:linear-gradient(180deg,#f6e9e1,#f2e1d8)}
-.final-stage{min-height:430px;border:8px solid #fff9f1;border-radius:3px;background:radial-gradient(ellipse at 50% 60%,#fff8ed 0,#f3e2d3 72%,#e7d1c0 100%);align-items:center;gap:clamp(12px,3vw,34px);padding:56px clamp(14px,4vw,40px);overflow:hidden}
+.final-stage{width:100%;min-height:clamp(320px,40vw,440px);display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,.9fr);grid-template-rows:1fr;align-items:end;justify-items:center;gap:clamp(12px,3vw,34px);padding:clamp(54px,7vw,76px) clamp(18px,5vw,56px) 28px;border:8px solid #fff9f1;border-radius:4px;background:radial-gradient(ellipse at 50% 60%,#fff8ed,#f3e2d3 72%,#e7d1c0);box-shadow:var(--shadow);overflow:hidden}
 .final-stage:before{top:30px;left:8%;width:84%;background:rgba(180,143,119,.24)}
 .final-stage:after{top:0;height:60px;background:rgba(180,143,119,.24)}
-.final-garden-glow{position:absolute;width:70%;height:65%;left:15%;bottom:-28%;border-radius:50%;background:radial-gradient(ellipse,rgba(166,187,147,.35),transparent 70%);pointer-events:none}
-.art-slot{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(142,105,87,.42);background:rgba(255,250,243,.43);color:#7b6257;min-height:190px;padding:18px 14px;backdrop-filter:blur(2px)}
-.art-slot strong{font:500 clamp(1.1rem,2.7vw,1.55rem) 'Playfair Display',serif;color:#5b4840;margin:8px 0 5px}
-.art-slot small{font-size:.72rem;line-height:1.5;color:#927c70}
-.slot-kicker{font-size:.57rem;letter-spacing:.16em;color:#a17e73}
-.peanuts-slot{flex:1.6;min-height:245px}
-.avatar-slot{flex:.85;min-height:190px;align-self:flex-end}
-.woodstock-slot{position:absolute;right:13%;top:9%;width:110px;min-height:80px;padding:10px;border-radius:50%;background:rgba(255,250,243,.62);animation:woodstockFloat 4.5s ease-in-out infinite}
-.woodstock-slot strong{font-size:1rem;margin:3px 0}
-.woodstock-slot small{font-size:.62rem}
-@keyframes woodstockFloat{0%,100%{transform:translate(0,0) rotate(-4deg)}50%{transform:translate(18px,-12px) rotate(5deg)}}
-.final-caption{margin-top:36px}
-.final-caption h2{letter-spacing:-.025em}
-.footer{background:#eee0d7;color:#947f73;padding:34px 15px;letter-spacing:.13em}
-@media(max-width:700px){
- .final-stage{min-height:340px;gap:10px;padding:58px 12px 28px}
- .peanuts-slot{min-height:205px;flex:1.3}
- .avatar-slot{min-height:160px;flex:.9}
- .woodstock-slot{right:8%;top:7%;width:90px;min-height:68px}
- .art-slot{padding:12px 8px}
- .art-slot small{font-size:.65rem}
-}
-@media(max-width:390px){
- .final-stage{min-height:300px}
- .peanuts-slot{min-height:180px}
- .avatar-slot{min-height:140px}
- .woodstock-slot{width:78px;right:5%}
-}
-
-
-/* Unified composition and alignment pass */
-:root{--content-width:1080px;--section-gutter:clamp(22px,5.5vw,76px);--section-space:clamp(72px,8.2vw,108px)}
-html{scroll-padding-top:18px}body{min-width:320px}
-.section{padding:var(--section-space) var(--section-gutter)}
-.section-inner{width:min(100%,var(--content-width));margin-inline:auto}
-.section-head{width:min(100%,650px);margin:0 auto clamp(34px,4.5vw,52px);text-wrap:pretty}
-.section-head h2{max-width:15ch;margin:12px auto 14px;line-height:1.08}
-.section-head p{max-width:44ch;margin-inline:auto;line-height:1.75}
-.eyebrow{line-height:1.5}.btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center;gap:9px;line-height:1.2}
-button{-webkit-tap-highlight-color:transparent}
-#welcome{min-height:100svh;padding:clamp(22px,5vw,54px);display:grid;place-items:center}
-.welcome-card{width:min(100%,620px);margin:auto;padding:clamp(42px,7vw,64px) clamp(22px,5vw,48px)}
-.welcome-card p{max-width:36ch}
-#room .section-inner{max-width:1100px}
-.room-scene{width:100%;height:clamp(360px,46.4vw,510px);margin-inline:auto}
-.room-controls{width:min(100%,760px);margin:26px auto 0;align-items:center;gap:12px}
-.music-panel{width:min(100%,520px);margin:30px auto 0;padding:clamp(18px,3vw,24px)}
-.music-panel iframe{display:block}
-#letters .section-inner{max-width:980px}
-.envelopes{width:min(100%,850px);grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:clamp(14px,3vw,28px)}
-.envelope{width:100%;max-width:260px;justify-self:center;min-width:0}
-.letter-modal{z-index:50}.letter-card{width:min(100%,460px);max-height:min(82svh,620px);overflow:auto}
-.letter-card p:empty{display:none}
-#garden .section-inner{max-width:1000px}
-.garden-ground{width:100%;min-height:390px;padding:64px clamp(14px,4vw,38px) 30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;justify-items:center;column-gap:clamp(8px,2.5vw,28px);border-radius:48% 48% 4px 4px/15% 15% 4px 4px}
-.flower-bed{width:min(100%,132px);height:230px;justify-self:center}
-.flower-svg{display:block;width:100%;height:190px}
-.flower-bed .label{min-height:1.2em;text-align:center}
-.water-btn{min-width:190px;margin:28px auto 0}
-.water-count{min-height:1.4em;font-variant-numeric:tabular-nums}.bloom-message{min-height:1.7em}
-#together .section-inner{max-width:1000px}
-.final-stage{width:100%;min-height:clamp(320px,40vw,430px);display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,.9fr);grid-template-rows:1fr;align-items:end;justify-items:center;gap:clamp(12px,3vw,34px);padding:clamp(54px,7vw,76px) clamp(18px,5vw,56px) 28px}
-.art-slot{border:0;background:transparent;backdrop-filter:none;min-height:0;padding:0;filter:none}
+.final-garden-glow{pointer-events:none}
+.art-slot{position:relative;z-index:1;display:flex;min-height:0;align-items:center;justify-content:center;border:0;background:transparent;padding:0;backdrop-filter:none}
 .peanuts-slot{grid-column:1;grid-row:1;width:100%;height:100%;min-height:230px}
 .avatar-slot{grid-column:2;grid-row:1;width:100%;height:78%;min-height:180px;align-self:end}
-.woodstock-slot{grid-column:1;grid-row:1;justify-self:end;align-self:start;width:clamp(58px,10vw,100px);height:clamp(48px,8vw,76px);min-height:0;margin-right:8%;margin-top:-24px;border:0;background:transparent;padding:0;animation:woodstockFloat 4.5s ease-in-out infinite}
+.woodstock-slot{position:absolute;z-index:2;grid-column:auto;grid-row:auto;top:9%;right:13%;width:clamp(58px,10vw,100px);height:clamp(48px,8vw,76px);min-height:0;margin:0;border:0;background:transparent;padding:0;animation:woodstockFloat 4.5s ease-in-out infinite}
+.art-slot img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center bottom}
+.peanuts-slot img{max-height:360px}
+.avatar-slot img{max-height:300px}
+.woodstock-slot img{object-position:center}
+@keyframes woodstockFloat{0%,100%{transform:translate(0,0) rotate(-4deg)}50%{transform:translate(18px,-12px) rotate(5deg)}}
 .final-caption{width:min(100%,560px);margin:clamp(28px,4vw,40px) auto 0;text-align:center}
-.final-caption h2{line-height:1.1}.final-caption p{max-width:44ch;margin:12px auto 22px;line-height:1.75}
+.final-caption h2{line-height:1.1;letter-spacing:-.025em}
+.final-caption p{max-width:44ch;margin:12px auto 22px;line-height:1.75}
 .footer{line-height:1.7}
 @media(max-width:700px){
- .section{padding:76px 20px}.section-head{margin-bottom:34px}.section-head h2{max-width:17ch}
- .room-scene{height:clamp(350px,60vw,420px)}.room-controls{max-width:420px}.room-controls .btn{flex:1 1 145px}
- .envelopes{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.envelope{max-width:230px;height:168px}
- .garden-ground{min-height:300px;padding:52px 8px 22px;column-gap:4px}
- .flower-bed{height:188px;width:100%;max-width:112px}.flower-svg{height:155px}.flower-bed .label{font-size:.62rem}
- .final-stage{min-height:300px;padding:54px 12px 22px;gap:8px}.peanuts-slot{min-height:190px}
- .avatar-slot{min-height:145px;height:75%}.woodstock-slot{width:66px;height:54px;margin-right:6%;margin-top:-15px}
+ .section{padding:76px 20px}.section-head{margin-bottom:34px}.section-head h2{max-width:18ch}
+ .room-scene{height:clamp(350px,60vw,420px)}.window{left:6%;width:32%;height:37%}.picture{right:8%;width:72px;height:88px}.shelf{right:5%;width:30%}
+ .sofa{left:19%;width:52%;height:29%}.cushion{left:24%;bottom:21%;width:65px}.throw{right:20%;bottom:16%;width:75px}.lamp{right:7%;bottom:20%;transform:scale(.8);transform-origin:bottom}.table{right:3%;width:17%}.room-caption{font-size:.85rem}
+ .room-controls{max-width:440px}.room-controls .btn{flex:1 1 145px;min-width:0}
+ .envelopes{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.envelope{max-width:230px;height:168px}.envelope:last-child:nth-child(odd){grid-column:1/-1}
+ .garden-ground{min-height:440px;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:4px;padding:48px 14px 20px;border-radius:34% 34% 4px 4px/8% 8% 4px 4px}
+ .flower-bed{width:100%;max-width:118px;height:180px}.flower-svg{height:145px}.flower-bed .label{font-size:.62rem}
+ .final-stage{min-height:310px;padding:54px 12px 22px;gap:8px}.peanuts-slot{min-height:190px}.avatar-slot{height:75%;min-height:145px}.woodstock-slot{top:7%;right:8%;width:66px;height:54px}
 }
 @media(max-width:420px){
- .section{padding-inline:16px}.room-scene{height:360px}.room-controls .btn{flex-basis:100%}
+ .section{padding-right:16px;padding-left:16px}.section-head h2{font-size:2rem}.room-scene{height:360px}.room-controls .btn{flex-basis:100%}
  .envelopes{gap:8px}.envelope{height:150px}.env-label{font-size:1rem}
- .garden-ground{min-height:258px;padding-top:42px}.flower-bed{height:158px}.flower-svg{height:126px}
- .flower-bed .label{font-size:.56rem;letter-spacing:.1em}
- .final-stage{min-height:260px;padding:48px 8px 18px}.peanuts-slot{min-height:165px}
- .avatar-slot{min-height:126px}.woodstock-slot{width:54px;height:44px}.final-caption p{padding-inline:8px}
+ .garden-ground{min-height:400px;padding-top:40px}.flower-bed{height:164px}.flower-svg{height:128px}.flower-bed .label{font-size:.58rem;letter-spacing:.1em}
+ .final-stage{min-height:270px;padding:48px 8px 18px}.peanuts-slot{min-height:165px}.avatar-slot{min-height:126px}.woodstock-slot{width:54px;height:44px}
 }
-@media(prefers-reduced-motion:reduce){.woodstock-slot{animation:none}}
-
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
@@ -175,7 +144,7 @@ button{-webkit-tap-highlight-color:transparent}
    <div class="shelf"></div><div class="lamp-glow"></div><div class="lamp"><div class="shade"></div><div class="stem"></div><div class="base"></div></div>
    <div class="rug"></div><div class="sofa"></div><div class="cushion"></div><div class="throw"></div><div class="table"></div><div class="book"></div><div class="room-caption">stay as long as you like</div>
   </div>
-  <div class="room-controls"><button class="btn" id="lampBtn">Turn the lamp on</button><button class="btn" id="roomMusicBtn">Find the music</button><button class="btn" id="gardenJump">Visit the garden</button></div>
+  <div class="room-controls"><button class="btn" id="lampBtn" aria-pressed="false">Turn the lamp on</button><button class="btn" id="roomMusicBtn">Find the music</button><button class="btn" id="gardenJump">Visit the garden</button></div>
   <div class="music-panel" id="music">
    <div class="eyebrow">now playing</div><h3>Sagip · Jan Roberts</h3>
    <iframe title="Sagip by Jan Roberts on Apple Music" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/sagip/1725956332"></iframe>
@@ -194,7 +163,7 @@ button{-webkit-tap-highlight-color:transparent}
   </div>
  </div>
 </section>
-<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="letterTitle">
  <div class="letter-card"><button class="close-modal" id="closeModal" aria-label="Close">×</button><div class="eyebrow">a note for you</div><h3 id="letterTitle">This envelope is waiting.</h3><p id="letterBody" aria-live="polite"></p></div>
 </div>
 
@@ -208,7 +177,7 @@ button{-webkit-tap-highlight-color:transparent}
    <div class="flower-bed lily" data-flower="lily2"><svg class="flower-svg" viewBox="0 0 120 190" aria-label="Pink lily"><path class="stem" d="M60 175 Q55 120 60 77"/><path class="leaf" d="M59 135 Q17 103 19 135 Q39 153 59 135Z"/><path class="leaf" d="M60 116 Q99 87 102 112 Q83 133 60 116Z"/><g class="bud"><path class="petal" d="M60 70 Q24 32 45 12 Q60 19 60 70Z"/><path class="petal" d="M60 70 Q96 32 75 12 Q60 19 60 70Z"/><path class="petal" d="M60 70 Q15 65 29 38 Q49 35 60 70Z"/><path class="petal" d="M60 70 Q105 65 91 38 Q71 35 60 70Z"/><path class="petal" d="M60 70 Q42 1 60 3 Q78 1 60 70Z"/><circle cx="60" cy="49" r="5" fill="#c58b6c"/></g></svg><div class="label">lily</div></div>
    <div class="flower-bed tulip" data-flower="tulip2"><svg class="flower-svg" viewBox="0 0 120 190" aria-label="Pink tulip"><path class="stem" d="M60 175 Q64 120 60 70"/><path class="leaf" d="M60 145 Q14 103 22 146 Q43 161 60 145Z"/><path class="leaf" d="M62 125 Q100 96 101 126 Q83 146 62 125Z"/><g class="bud"><path class="petal" d="M35 67 Q28 22 48 28 Q54 39 60 67Z"/><path class="petal" d="M60 67 Q54 14 70 23 Q79 40 60 67Z"/><path class="petal" d="M60 67 Q75 19 91 31 Q95 52 60 67Z"/><path class="petal" d="M35 67 Q60 83 91 67 Q76 96 60 85 Q44 96 35 67Z"/></g></svg><div class="label">tulip</div></div>
   </div>
-  <button class="btn primary water-btn" id="waterBtn">Water the flowers</button><div class="water-count" id="waterCount">0 of 4 flowers have bloomed</div>
+  <button class="btn primary water-btn" id="waterBtn">Water the flowers</button><div class="water-count" id="waterCount" aria-live="polite">0 of 4 flowers have bloomed</div>
   <p class="bloom-message" id="bloomMessage">The garden is in bloom.</p>
  </div>
 </section>
@@ -231,14 +200,110 @@ button{-webkit-tap-highlight-color:transparent}
 <footer class="footer">MADE WITH CARE · A LITTLE WORLD TO COME BACK TO</footer>
 
 <script>
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-$('#enterBtn').addEventListener('click',()=>$('#room').scrollIntoView({behavior:'smooth'}));
-$('#gardenJump').addEventListener('click',()=>$('#garden').scrollIntoView({behavior:'smooth'}));
-$('#roomMusicBtn').addEventListener('click',()=>$('#music').scrollIntoView({behavior:'smooth',block:'center'}));
-$('#backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-let lampOn=false;$('#lampBtn').addEventListener('click',()=>{lampOn=!lampOn;$('.lamp-glow').style.background=lampOn?'radial-gradient(ellipse,rgba(255,224,160,.75),transparent 70%)':'radial-gradient(ellipse,rgba(255,224,160,.18),transparent 70%)';$('#lampBtn').textContent=lampOn?'Turn the lamp off':'Turn the lamp on'});
-const modal=$('#letterModal');const titles=['A little note','For later','Just because'];$$('.envelope').forEach((env)=>env.addEventListener('click',()=>{const i=Number(env.dataset.letter);$('#letterTitle').textContent=titles[i];$('#letterBody').textContent='';modal.classList.add('show')}));$('#closeModal').addEventListener('click',()=>modal.classList.remove('show'));modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('show')});
-let water=0;const beds=$$('.flower-bed');$('#waterBtn').addEventListener('click',()=>{if(water>=4)return;water++;beds[water-1].classList.add('bloomed');$('#waterCount').textContent=water+' of 4 flowers have bloomed';if(water===2)$('#butterflyA').classList.add('show');if(water===3)$('#butterflyB').classList.add('show');if(water===4){$('#bloomMessage').classList.add('show');$('#waterBtn').textContent='The garden is blooming';$('#waterBtn').disabled=true}});
+
+const selectOne = (selector) => document.querySelector(selector);
+const selectAll = (selector) => [...document.querySelectorAll(selector)];
+const scrollToElement = (element, block = "start") => {
+  if (element) element.scrollIntoView({ behavior: "smooth", block });
+};
+
+selectOne("#enterBtn")?.addEventListener("click", () => scrollToElement(selectOne("#room")));
+selectOne("#gardenJump")?.addEventListener("click", () => scrollToElement(selectOne("#garden")));
+selectOne("#roomMusicBtn")?.addEventListener("click", () => {
+  const music = selectOne("#music");
+  scrollToElement(music, "center");
+  music?.classList.remove("is-focused");
+  requestAnimationFrame(() => music?.classList.add("is-focused"));
+});
+selectOne("#backTop")?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+const roomScene = selectOne(".room-scene");
+const lampButton = selectOne("#lampBtn");
+lampButton?.setAttribute("aria-pressed", "false");
+lampButton?.addEventListener("click", () => {
+  const isLit = roomScene?.classList.toggle("is-lit") ?? false;
+  lampButton.setAttribute("aria-pressed", String(isLit));
+  lampButton.textContent = isLit ? "Turn the lamp off" : "Turn the lamp on";
+});
+
+const modal = selectOne("#letterModal");
+const modalTitle = selectOne("#letterTitle");
+const modalBody = selectOne("#letterBody");
+const closeButton = selectOne("#closeModal");
+const envelopeTitles = ["A little note", "For later", "Just because"];
+let activeEnvelope = null;
+
+const closeLetter = () => {
+  if (!modal?.classList.contains("show")) return;
+  modal.classList.remove("show");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  activeEnvelope?.classList.remove("is-open");
+  activeEnvelope?.focus();
+  activeEnvelope = null;
+};
+
+selectAll(".envelope").forEach((envelope) => {
+  envelope.addEventListener("click", () => {
+    const index = Number(envelope.dataset.letter);
+    if (!Number.isInteger(index) || !envelopeTitles[index] || !modal) return;
+    activeEnvelope?.classList.remove("is-open");
+    activeEnvelope = envelope;
+    envelope.classList.add("is-open");
+    modalTitle.textContent = envelopeTitles[index];
+    modalBody.textContent = "";
+    modal.setAttribute("aria-hidden", "false");
+    modal.classList.add("show");
+    document.body.classList.add("modal-open");
+    closeButton?.focus();
+  });
+});
+
+closeButton?.addEventListener("click", closeLetter);
+modal?.addEventListener("click", (event) => {
+  if (event.target === modal) closeLetter();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeLetter();
+  if (event.key !== "Tab" || !modal?.classList.contains("show")) return;
+  const focusable = [...modal.querySelectorAll("button,[href],[tabindex]:not([tabindex='-1'])")]
+    .filter((element) => !element.disabled);
+  if (!focusable.length) return;
+  const first = focusable[0], last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault(); last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault(); first.focus();
+  }
+});
+
+let waterCount = 0;
+const flowerBeds = selectAll(".flower-bed");
+const waterButton = selectOne("#waterBtn");
+const counter = selectOne("#waterCount");
+const bloomMessage = selectOne("#bloomMessage");
+waterButton?.setAttribute("aria-label", "Water the flowers");
+counter?.setAttribute("aria-live", "polite");
+
+waterButton?.addEventListener("click", () => {
+  if (waterCount >= flowerBeds.length) return;
+  const flower = flowerBeds[waterCount];
+  flower.classList.add("bloomed");
+  flower.setAttribute("aria-label", flower.dataset.flower + " bloomed");
+  waterCount += 1;
+  if (counter) counter.textContent = waterCount + " of " + flowerBeds.length + " flowers have bloomed";
+  if (waterCount === 2) selectOne("#butterflyA")?.classList.add("show");
+  if (waterCount === 3) selectOne("#butterflyB")?.classList.add("show");
+  if (waterCount === flowerBeds.length) {
+    bloomMessage?.classList.add("show");
+    if (waterButton) {
+      waterButton.textContent = "The garden is blooming";
+      waterButton.disabled = true;
+      waterButton.setAttribute("aria-label", "The garden is blooming");
+    }
+  }
+});
+
 </script>
 </body>
 </html>
