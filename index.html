@@ -21,6 +21,79 @@
 #together{background:#f5e8df;padding-bottom:110px}.final-stage{max-width:900px;margin:auto;min-height:360px;background:linear-gradient(#f6e8d9 0 70%,#d8c7b3 70%);border:9px solid #fff8ef;position:relative;overflow:hidden;box-shadow:var(--shadow);display:flex;align-items:end;justify-content:center;padding:0 20px 24px}.final-stage:before{content:"";position:absolute;top:36px;left:10%;width:80%;height:1px;background:#d8bca8}.final-stage:after{content:"";position:absolute;top:0;left:50%;height:65px;width:1px;background:#d8bca8}.friend{position:relative;z-index:1;width:180px;height:230px;display:grid;place-items:end center}.friend svg{width:100%;height:100%;overflow:visible}.final-caption{text-align:center;margin:32px auto 0;max-width:520px}.final-caption h2{font:500 clamp(2rem,5vw,3.3rem) 'Playfair Display',serif;margin:0 0 10px}.final-caption p{color:var(--muted);line-height:1.8}.footer{text-align:center;padding:30px 15px;color:#9a8679;font-size:.7rem;letter-spacing:.08em}
 @media(max-width:700px){.section{padding:76px 5vw}.room-scene{height:420px}.window{left:6%;width:32%;height:37%}.picture{right:8%;width:72px;height:88px}.shelf{right:5%;width:30%}.sofa{left:19%;width:52%;height:29%}.cushion{left:24%;bottom:21%;width:65px}.throw{right:20%;bottom:16%;width:75px}.lamp{right:7%;bottom:20%;transform:scale(.8);transform-origin:bottom}.table{right:3%;width:17%}.room-caption{font-size:.85rem}.envelopes{grid-template-columns:repeat(2,1fr);gap:12px}.envelope{height:170px}.garden-ground{gap:8px;padding-left:6px;padding-right:6px;min-height:300px}.flower-bed{width:25%;height:190px}.flower-svg{width:100%;height:160px}.friend{width:31%;height:180px}.final-stage{min-height:280px;padding-bottom:18px}}@media(max-width:390px){.room-scene{height:365px}.sofa{left:15%;width:55%}.lamp{right:2%;transform:scale(.68)}.book{left:8%}.envelope{height:155px}.garden-ground{min-height:255px}.flower-bed{height:160px}.flower-svg{height:130px}.friend{height:145px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* refined visual pass: cohesive paper, depth, spacing and responsive art layout */
+:root{--paper:#fbf5ef;--cream:#f6e9df;--rose:#d49396;--rose2:#edc9c2;--ink:#493b37;--muted:#8d7970;--green:#899b80;--deepgreen:#536c57;--gold:#d9b77f;--line:rgba(103,79,67,.15);--shadow:0 24px 70px rgba(94,67,52,.13)}
+body{background:linear-gradient(180deg,#fbf5ef,#f8eee7 45%,#f4e8df)}
+.section{padding-top:clamp(76px,9vw,112px);padding-bottom:clamp(76px,9vw,112px)}
+.section-head{margin-bottom:clamp(34px,5vw,54px)}
+.section-head .eyebrow{color:#a17e73}
+.section-head h2{letter-spacing:-.025em}
+.section-head p{font-size:.96rem}
+.btn{box-shadow:0 5px 14px rgba(99,70,55,.06)}
+.btn:active{transform:translateY(0) scale(.98)}
+#welcome{background:radial-gradient(ellipse at 50% 28%,#fffaf3 0,#f6e8e1 53%,#e9d6d0 100%)}
+#welcome:before,#welcome:after{border-color:rgba(155,119,102,.16)}
+.welcome-card{border-radius:3px;box-shadow:0 28px 90px rgba(94,67,52,.14);background:rgba(255,250,244,.78)}
+.welcome-art{filter:drop-shadow(0 8px 10px rgba(112,86,68,.10))}
+.welcome-card h1{letter-spacing:-.035em}
+#room{background:linear-gradient(180deg,#eee0d4,#e5d1c2)}
+.room-scene{border:8px solid #fff8ef;outline:1px solid rgba(119,86,68,.12);box-shadow:0 28px 70px rgba(93,65,49,.17);border-radius:3px}
+.room-wallpaper{opacity:.27}
+.window{box-shadow:inset 0 0 0 2px #b79b89,0 12px 25px rgba(91,70,57,.10)}
+.picture{transform:rotate(2deg)}
+.sofa{box-shadow:inset 0 -12px 0 #9f716c,0 14px 24px rgba(79,53,43,.12)}
+.cushion,.throw{box-shadow:0 5px 12px rgba(79,53,43,.09)}
+.lamp-glow{transition:background .5s ease;mix-blend-mode:screen}
+.lamp .shade{transition:filter .4s ease,background .4s ease}
+.room-caption{letter-spacing:.02em}
+.music-panel{border-radius:4px;box-shadow:0 12px 35px rgba(94,67,52,.06)}
+#letters{background:linear-gradient(180deg,#faf2e9,#f5e9df)}
+.envelopes{gap:clamp(14px,3vw,26px)}
+.envelope{transition:transform .25s ease;filter:drop-shadow(0 8px 10px rgba(90,62,49,.06))}
+.envelope:hover{transform:translateY(-5px)}
+.env-paper{background:#ead0c2}
+.env-flap{background:#f3dfd2}
+.seal{background:#b77d7e;box-shadow:0 2px 6px rgba(85,51,48,.15)}
+.letter-card{border-radius:3px;box-shadow:0 32px 90px rgba(33,20,15,.30)}
+#garden{background:linear-gradient(180deg,#edf0e6,#e2eadb)}
+.garden-ground{border:1px solid rgba(91,119,83,.12);box-shadow:inset 0 12px 30px rgba(255,255,255,.2);background:linear-gradient(180deg,#e1ead8,#afc2a3 75%,#9db38f)}
+.flower-bed{filter:drop-shadow(0 5px 4px rgba(58,82,53,.10))}
+.flower-bed .label{font-weight:600;letter-spacing:.16em}
+.water-btn{box-shadow:0 8px 18px rgba(83,108,87,.16)}
+#together{background:linear-gradient(180deg,#f6e9e1,#f2e1d8)}
+.final-stage{min-height:430px;border:8px solid #fff9f1;border-radius:3px;background:radial-gradient(ellipse at 50% 60%,#fff8ed 0,#f3e2d3 72%,#e7d1c0 100%);align-items:center;gap:clamp(12px,3vw,34px);padding:56px clamp(14px,4vw,40px);overflow:hidden}
+.final-stage:before{top:30px;left:8%;width:84%;background:rgba(180,143,119,.24)}
+.final-stage:after{top:0;height:60px;background:rgba(180,143,119,.24)}
+.final-garden-glow{position:absolute;width:70%;height:65%;left:15%;bottom:-28%;border-radius:50%;background:radial-gradient(ellipse,rgba(166,187,147,.35),transparent 70%);pointer-events:none}
+.art-slot{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(142,105,87,.42);background:rgba(255,250,243,.43);color:#7b6257;min-height:190px;padding:18px 14px;backdrop-filter:blur(2px)}
+.art-slot strong{font:500 clamp(1.1rem,2.7vw,1.55rem) 'Playfair Display',serif;color:#5b4840;margin:8px 0 5px}
+.art-slot small{font-size:.72rem;line-height:1.5;color:#927c70}
+.slot-kicker{font-size:.57rem;letter-spacing:.16em;color:#a17e73}
+.peanuts-slot{flex:1.6;min-height:245px}
+.avatar-slot{flex:.85;min-height:190px;align-self:flex-end}
+.woodstock-slot{position:absolute;right:13%;top:9%;width:110px;min-height:80px;padding:10px;border-radius:50%;background:rgba(255,250,243,.62);animation:woodstockFloat 4.5s ease-in-out infinite}
+.woodstock-slot strong{font-size:1rem;margin:3px 0}
+.woodstock-slot small{font-size:.62rem}
+@keyframes woodstockFloat{0%,100%{transform:translate(0,0) rotate(-4deg)}50%{transform:translate(18px,-12px) rotate(5deg)}}
+.final-caption{margin-top:36px}
+.final-caption h2{letter-spacing:-.025em}
+.footer{background:#eee0d7;color:#947f73;padding:34px 15px;letter-spacing:.13em}
+@media(max-width:700px){
+ .final-stage{min-height:340px;gap:10px;padding:58px 12px 28px}
+ .peanuts-slot{min-height:205px;flex:1.3}
+ .avatar-slot{min-height:160px;flex:.9}
+ .woodstock-slot{right:8%;top:7%;width:90px;min-height:68px}
+ .art-slot{padding:12px 8px}
+ .art-slot small{font-size:.65rem}
+}
+@media(max-width:390px){
+ .final-stage{min-height:300px}
+ .peanuts-slot{min-height:180px}
+ .avatar-slot{min-height:140px}
+ .woodstock-slot{width:78px;right:5%}
+}
+
 </style>
 </head>
 <body>
@@ -85,9 +158,10 @@
  <div class="section-inner">
   <div class="section-head"><div class="eyebrow">04 · a warm welcome</div><h2>There is room for you here.</h2><p>A little gathering, with open arms and a tiny bird who can't sit still.</p></div>
   <div class="final-stage">
-   <div class="friend" aria-label="A small white beagle with open arms"><svg viewBox="0 0 180 230"><path d="M50 88 Q28 67 26 107 Q22 142 49 142" fill="#35312f"/><path d="M128 83 Q154 68 153 109 Q153 141 129 143" fill="#35312f"/><ellipse cx="90" cy="105" rx="48" ry="55" fill="#fffdf8" stroke="#4b4540" stroke-width="3"/><path d="M56 83 Q43 42 65 34 Q82 30 82 81Z" fill="#302d2b"/><path d="M101 79 Q118 34 138 49 Q149 63 121 96Z" fill="#302d2b"/><ellipse cx="74" cy="99" rx="4" ry="6" fill="#302d2b"/><ellipse cx="105" cy="99" rx="4" ry="6" fill="#302d2b"/><ellipse cx="90" cy="115" rx="8" ry="6" fill="#302d2b"/><path d="M90 121 Q84 132 77 124 M90 121 Q97 132 104 124" fill="none" stroke="#302d2b" stroke-width="2.5" stroke-linecap="round"/><path d="M53 144 Q35 155 26 187 Q47 205 89 202 Q132 205 153 187 Q145 155 127 144Z" fill="#fffdf8" stroke="#4b4540" stroke-width="3"/><path d="M50 151 Q24 133 13 154 Q8 171 35 180 M130 151 Q157 133 168 154 Q172 171 145 180" fill="none" stroke="#fffdf8" stroke-width="13" stroke-linecap="round"/><path d="M50 151 Q24 133 13 154 Q8 171 35 180 M130 151 Q157 133 168 154 Q172 171 145 180" fill="none" stroke="#4b4540" stroke-width="2.5" stroke-linecap="round"/><path d="M57 198 L53 220 M121 198 L127 220" stroke="#4b4540" stroke-width="3" stroke-linecap="round"/><path d="M53 220 Q42 224 35 219 M127 220 Q138 224 145 219" stroke="#4b4540" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M73 147 Q90 157 108 147" fill="none" stroke="#c98c8d" stroke-width="4"/></svg></div>
-   <div class="friend" aria-label="A little yellow bird flying"><svg viewBox="0 0 180 230"><g class="bird-wing" style="transform-origin:86px 88px;animation:flap .22s ease-in-out infinite alternate"><path d="M87 88 Q50 39 29 70 Q42 104 87 99Z" fill="#e8c45e" stroke="#8f783e" stroke-width="2"/></g><ellipse cx="91" cy="103" rx="37" ry="27" fill="#efd16e" stroke="#8f783e" stroke-width="2"/><circle cx="112" cy="91" r="3.5" fill="#4b4540"/><path d="M127 102 L145 108 L127 114Z" fill="#d58b4d"/><path d="M60 103 Q38 124 32 147 Q61 143 77 119Z" fill="#e8c45e" stroke="#8f783e" stroke-width="2"/><path d="M82 128 L76 143 M99 128 L104 143" stroke="#8f783e" stroke-width="2.5" stroke-linecap="round"/><path d="M75 143 L66 147 M104 143 L114 147" stroke="#8f783e" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-   <div class="friend" aria-label="A small friend standing nearby"><svg viewBox="0 0 180 230"><path d="M48 84 Q28 61 25 103 Q23 139 49 143" fill="#8b7467"/><path d="M129 82 Q152 64 154 105 Q155 139 130 143" fill="#8b7467"/><ellipse cx="90" cy="105" rx="48" ry="54" fill="#e7d5c4" stroke="#65554b" stroke-width="3"/><path d="M55 80 Q47 39 75 35 Q95 38 85 84" fill="#9a7d6c"/><path d="M98 81 Q120 37 139 56 Q145 76 119 96" fill="#9a7d6c"/><circle cx="74" cy="100" r="4" fill="#51443e"/><circle cx="106" cy="100" r="4" fill="#51443e"/><ellipse cx="90" cy="115" rx="7" ry="5" fill="#51443e"/><path d="M90 120 Q82 131 75 122 M90 120 Q98 131 105 122" fill="none" stroke="#51443e" stroke-width="2.5" stroke-linecap="round"/><path d="M53 148 Q33 157 29 192 Q55 209 90 203 Q125 209 151 192 Q146 157 127 148Z" fill="#e7d5c4" stroke="#65554b" stroke-width="3"/><path d="M53 157 Q26 140 13 163 M127 157 Q154 140 167 163" fill="none" stroke="#e7d5c4" stroke-width="12" stroke-linecap="round"/><path d="M53 157 Q26 140 13 163 M127 157 Q154 140 167 163" fill="none" stroke="#65554b" stroke-width="2.5" stroke-linecap="round"/><path d="M59 200 L54 220 M120 200 L126 220" stroke="#65554b" stroke-width="3" stroke-linecap="round"/></svg></div>
+   <div class="final-garden-glow" aria-hidden="true"></div>
+   <div class="art-slot peanuts-slot"><span class="slot-kicker">THE WELCOMING GROUP</span><strong>Peanuts friends</strong><small>Your original group image goes here</small></div>
+   <div class="art-slot avatar-slot"><span class="slot-kicker">A PLACE FOR YOU</span><strong>Your avatar</strong><small>Add your own image here</small></div>
+   <div class="art-slot woodstock-slot"><span class="slot-kicker">ABOVE THE GROUP</span><strong>Woodstock</strong><small>Separate flying image</small></div>
   </div>
   <div class="final-caption"><h2 class="serif">A soft landing.</h2><p>This little corner will be here whenever you want to visit.</p><button class="btn" id="backTop">Back to the beginning</button></div>
  </div>
